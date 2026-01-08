@@ -1,0 +1,146 @@
+{
+  "meta": {
+    "title": "Realidade Virtual Imersiva - Trabalho de Conclusão de Curso",
+    "description": "Trabalho de Conclusão de Curso em Ciência da Computação sobre Realidade Virtual Imersiva apresentado no CESUPA, Brasil, 1999"
+  },
+  "header": {
+    "graduationThesis": "Trabalho de Conclusão de Curso",
+    "cesupa1999": "CESUPA - 1999",
+    "about": "Sobre"
+  },
+  "hero": {
+    "title": "Realidade Virtual Imersiva",
+    "subtitle": "Immersive Virtual Reality",
+    "heroImageAlt": "Realidade Virtual Imersiva - Question Reality - Ilustração com paisagem virtual",
+    "description": "Trabalho de Conclusão de Curso em Ciência da Computação apresentado como requisito parcial para a obtenção do grau de Tecnólogo em Processamento de Dados pelo Centro de Ensino Superior do Pará - CESUPA - Brasil, ano 1999",
+    "location": "CESUPA - Brasil",
+    "year": "1999",
+    "authors": "Raed Nadim Aboul Hosn, Claudia Pereira, Jackson Costa",
+    "readThesisEn": "EN",
+    "readThesisPt": "PT"
+  },
+  "dedicatorias": {
+    "title": "DEDICATÓRIAS E AGRADECIMENTOS",
+    "p1": "Este trabalho é dedicado a todos aqueles que acreditaram no potencial da Realidade Virtual como ferramenta transformadora da interação humano-computador.",
+    "p2": "Agradecemos aos nossos orientadores, Profª. Ms. Marianne Kogut Eliasquevici e Prof. Dr. Gustavo Augusto Lima de Campos, pela dedicação, paciência e conhecimento compartilhado durante todo o desenvolvimento desta pesquisa.",
+    "p3": "À Profª. Ms. Maria de Fátima Frayha de Souza, pela supervisão metodológica que foi fundamental para a estruturação deste trabalho.",
+    "p4": "Aos nossos professores do CESUPA, que ao longo do curso nos proporcionaram a base de conhecimento necessária para a realização desta pesquisa.",
+    "p5": "Aos nossos familiares e amigos, pelo apoio incondicional e compreensão durante os momentos de ausência necessários para a conclusão deste trabalho.",
+    "p6": "A todos que, direta ou indiretamente, contribuíram para a realização desta pesquisa sobre Realidade Virtual Imersiva."
+  },
+  "introducao": {
+    "title": "INTRODUÇÃO",
+    "p1": "A Realidade Virtual (RV) emergiu nas últimas décadas como uma das áreas mais promissoras e revolucionárias da ciência da computação. Sua capacidade de criar ambientes sintéticos tridimensionais com os quais os usuários podem interagir de forma natural e intuitiva representa um paradigma fundamental na evolução da interface humano-computador.",
+    "p2": "O conceito de Realidade Virtual transcende a simples apresentação de gráficos tridimensionais em uma tela. Trata-se da criação de experiências imersivas que envolvem múltiplos sentidos humanos - visão, audição, tato, e potencialmente olfato e paladar - para transportar o usuário para um mundo completamente novo, seja ele uma recriação fiel da realidade, uma simulação de ambientes impossíveis ou perigosos, ou uma visualização abstrata de dados e conceitos complexos.",
+    "p3": "Desde os primeiros experimentos de Ivan Sutherland na década de 1960 com o \"Sword of Damocles\", considerado o primeiro sistema de realidade virtual, até os sofisticados sistemas contemporâneos, a tecnologia de RV percorreu um longo caminho. Os avanços em processamento gráfico, capacidade computacional, miniaturização de componentes eletrônicos e desenvolvimento de novos algoritmos tornaram possível a criação de experiências virtuais cada vez mais convincentes e acessíveis.",
+    "p4": "Este trabalho apresenta uma análise abrangente das principais formas e aplicações da Realidade Virtual Imersiva, explorando seus conceitos fundamentais, tecnologias habilitadoras e impactos em diversas áreas do conhecimento humano. Nosso objetivo é consolidar o entendimento sobre esta tecnologia emergente, demonstrando seu potencial transformador e as direções futuras de seu desenvolvimento.",
+    "p5": "Para compreender plenamente a Realidade Virtual, é necessário primeiro estabelecer os conceitos fundamentais que a sustentam. Assim, iniciamos nossa análise com a exploração de noções essenciais como Ciberespaço, Espaço e Cibertempo, que fornecem o arcabouço conceitual necessário para entender como ambientes virtuais são criados e experienciados.",
+    "p6": "Em seguida, examinamos as diversas formas que a Realidade Virtual pode assumir - desde sistemas de simulação até realidade aumentada, telepresença e interfaces ciborgues - demonstrando a versatilidade e amplitude desta tecnologia. Particular atenção é dedicada aos aspectos de imersão, interação e envolvimento, os três pilares fundamentais que definem a qualidade e eficácia de uma experiência de RV.",
+    "p7": "A implementação de sistemas de Realidade Virtual requer hardware especializado e sofisticado. Portanto, dedicamos um capítulo inteiro à análise dos dispositivos que tornam a RV possível: displays visuais (desde HMDs até sistemas CAVE), sistemas de rastreamento de movimento, processadores gráficos de alto desempenho e interfaces hápticas que proporcionam feedback tátil e de força.",
+    "p8": "A aplicabilidade da Realidade Virtual se estende por praticamente todas as áreas do empreendimento humano. Desde aplicações médicas - como treinamento cirúrgico e tratamento de fobias - até educação, entretenimento, arquitetura, engenharia e até mesmo religião e arte, a RV está transformando a forma como trabalhamos, aprendemos e nos relacionamos com informação e entre nós mesmos.",
+    "p9": "Este trabalho foi desenvolvido através de extensa pesquisa bibliográfica, incluindo livros especializados, artigos científicos de periódicos internacionais, recursos online de centros de pesquisa em RV, documentação técnica de fabricantes, anais de conferências especializadas (como SIGGRAPH e IEEE VR), além de palestras e workshops ministrados por especialistas da área.",
+    "p10": "A metodologia empregada buscou não apenas compilar informações existentes, mas também analisá-las criticamente, identificando tendências, desafios e oportunidades no campo da Realidade Virtual Imersiva. Nosso objetivo é que este trabalho sirva não apenas como um documento histórico do estado da arte da RV no final dos anos 1990, mas também como uma fonte de consulta útil para estudantes, pesquisadores e profissionais interessados nesta fascinante área da tecnologia.",
+    "p11": "Convidamos o leitor a explorar conosco este universo virtual, descobrindo como a tecnologia está redefinindo os limites entre o real e o virtual, entre o possível e o imaginário, e como a Realidade Virtual Imersiva está moldando o futuro da interação humano-computador."
+  },
+  "indice": {
+    "title": "ÍNDICE",
+    "chapter1": {
+      "title": "Capítulo 1 - Conceitos Fundamentais",
+      "s1": "1.1 O Ciberespaço",
+      "s2": "1.2 O Espaço",
+      "s3": "1.3 O Cibertempo"
+    },
+    "chapter2": {
+      "title": "Capítulo 2 - O Que É Realidade Virtual",
+      "s1": "2.1 Breve Histórico",
+      "s2": "2.2 Definições",
+      "s3": "2.2.1 Imersão",
+      "s4": "2.2.2 Envolvimento",
+      "s5": "2.2.3 Imersão"
+    },
+    "chapter3": {
+      "title": "Capítulo 3 - Formas de Realidade Virtual Imersiva",
+      "s1": "3.1 RV de Simulação",
+      "s2": "3.2 Realidade Virtual de Projeção",
+      "s3": "3.3 Augmented Reality (Realidade Realçada)",
+      "s4": "3.4 Dispositivos Físicos",
+      "s5": "3.5 Telepresença",
+      "s6": "3.6 Visually Coupled Displays",
+      "s7": "3.7 Realidade Virtual de Mesa (Desktop RV)",
+      "s8": "3.8 Hypertexto (Hipertexto)",
+      "s9": "3.9 Som 3D",
+      "s10": "3.9 Ciborg"
+    },
+    "chapter4": {
+      "title": "Capítulo 4 - Dispositivos para Realidade Virtual",
+      "s1": "4.1 Dispositivos Visuais",
+      "s2": "4.2 Sistemas de Rastreamento",
+      "s3": "4.3 Processamento de Imagem",
+      "s4": "4.4 Dispositivos de Entrada"
+    },
+    "chapter5": {
+      "title": "Capítulo 5 - Aplicabilidade",
+      "s1": "5.1 Distúrbios Biopsicossociais",
+      "s2": "5.2 Medicina",
+      "s3": "5.3 Arquitetura e Construção",
+      "s4": "5.4 Arte",
+      "s5": "5.5 Negócios",
+      "s6": "5.6 Deficiências",
+      "s7": "5.7 Educação e Treinamento",
+      "s8": "5.8 Engenharia",
+      "s9": "5.9 Entretenimento",
+      "s10": "5.10 Marketing",
+      "s11": "5.11 Militarismo",
+      "s12": "5.12 Religião",
+      "s13": "5.13 Sexo",
+      "s14": "5.14 Comunidades Virtuais",
+      "s15": "5.15 Passeio Ciclístico Virtual"
+    },
+    "chapter6": {
+      "title": "Considerações Finais",
+      "s1": "Bibliografia",
+      "s2": "Glossário"
+    }
+  },
+  "about": {
+    "title": "Sobre o Autor",
+    "authors": "Autores",
+    "author1Name": "Raed Nadim Aboul Hosn",
+    "author1Role": "Tecnólogo em Processamento de Dados",
+    "author2Name": "Claudia Pereira",
+    "author3Name": "Jackson Costa",
+    "author2Role": "Tecnóloga em Processamento de Dados",
+    "orientation": "Orientação",
+    "advisor": "Orientador:",
+    "advisorName": "Profª. Ms. Marianne Kogut Eliasquevici",
+    "coAdvisor": "Coorientador:",
+    "coAdvisorName": "Prof. Dr. Gustavo Augusto Lima de Campos",
+    "methodologicalSupervision": "Supervisão Metodológica:",
+    "methodologicalSupervisorName": "Profª. Ms. Maria de Fátima Frayha de Souza",
+    "computerScience": "Ciência da Computação"
+  },
+  "contact": {
+    "email": "email:"
+  },
+  "footer": {
+    "copyright": "© 1999 Centro de Ensino Superior do Pará - CESUPA. Todos os direitos reservados."
+  },
+  "sidebar": {
+    "content": "Conteúdo",
+    "mainPage": "Página Inicial",
+    "index": "Índice",
+    "finalConsiderations": "Considerações Finais",
+    "bibliography": "Bibliografia",
+    "glossary": "Glossário"
+  },
+  "navigation": {
+    "previousChapter": "Capítulo Anterior",
+    "mainPage": "Página Principal",
+    "nextChapter": "Próximo Capítulo",
+    "chapter": "Capítulo"
+  },
+  "languageSwitch": {
+    "en": "English",
+    "pt": "Português"
+  }
+}

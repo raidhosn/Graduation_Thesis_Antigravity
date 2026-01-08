@@ -1,0 +1,36 @@
+{
+  "chapters": {
+    "chapter1": {
+      "title": "Chapter 1",
+      "subtitle": "Fundamental Concepts"
+    },
+    "chapter2": {
+      "title": "Chapter 2",
+      "subtitle": "What Is Virtual Reality"
+    },
+    "chapter3": {
+      "title": "Chapter 3",
+      "subtitle": "Forms of Immersive Virtual Reality"
+    },
+    "chapter4": {
+      "title": "Chapter 4",
+      "subtitle": "Virtual Reality Devices"
+    },
+    "chapter5": {
+      "title": "Chapter 5",
+      "subtitle": "Applicability"
+    },
+    "chapter6": {
+      "title": "Final Considerations",
+      "subtitle": ""
+    },
+    "chapter7": {
+      "title": "Bibliography",
+      "subtitle": ""
+    },
+    "chapter8": {
+      "title": "Glossary",
+      "subtitle": ""
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "chapters": {
+    "chapter1": {
+      "title": "Capítulo 1",
+      "subtitle": "Conceitos Fundamentais"
+    },
+    "chapter2": {
+      "title": "Capítulo 2",
+      "subtitle": "O Que É Realidade Virtual"
+    },
+    "chapter3": {
+      "title": "Capítulo 3",
+      "subtitle": "Formas de Realidade Virtual Imersiva"
+    },
+    "chapter4": {
+      "title": "Capítulo 4",
+      "subtitle": "Dispositivos para Realidade Virtual"
+    },
+    "chapter5": {
+      "title": "Capítulo 5",
+      "subtitle": "Aplicabilidade"
+    },
+    "chapter6": {
+      "title": "Considerações Finais",
+      "subtitle": ""
+    },
+    "chapter7": {
+      "title": "Bibliografia",
+      "subtitle": ""
+    },
+    "chapter8": {
+      "title": "Glossário",
+      "subtitle": ""
+    }
+  }
+}

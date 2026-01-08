@@ -1,0 +1,146 @@
+{
+  "meta": {
+    "title": "Immersive Virtual Reality - Graduation Thesis",
+    "description": "Computer Science Graduation Thesis on Immersive Virtual Reality presented at CESUPA, Brazil, 1999"
+  },
+  "header": {
+    "graduationThesis": "Graduation Thesis",
+    "cesupa1999": "CESUPA - 1999",
+    "about": "About"
+  },
+  "hero": {
+    "title": "Immersive Virtual Reality",
+    "subtitle": "Immersive Virtual Reality",
+    "heroImageAlt": "Immersive Virtual Reality - Question Reality - Illustration with virtual landscape",
+    "description": "Computer Science Graduation Thesis presented as a partial requisite to the obtention of Computer Science degree from Centro de Ensino Superior do Pará - CESUPA - Brazil, year 1999",
+    "location": "CESUPA - Brazil",
+    "year": "1999",
+    "authors": "Raed Nadim Aboul Hosn, Claudia Pereira, Jackson Costa",
+    "readThesisEn": "EN",
+    "readThesisPt": "PT"
+  },
+  "dedicatorias": {
+    "title": "DEDICATIONS AND ACKNOWLEDGMENTS",
+    "p1": "This work is dedicated to all those who believed in the potential of Virtual Reality as a transformative tool for human-computer interaction.",
+    "p2": "We thank our advisors, Prof. Ms. Marianne Kogut Eliasquevici and Prof. Dr. Gustavo Augusto Lima de Campos, for their dedication, patience and knowledge shared throughout the development of this research.",
+    "p3": "To Prof. Ms. Maria de Fátima Frayha de Souza, for the methodological supervision that was fundamental for the structuring of this work.",
+    "p4": "To our professors at CESUPA, who throughout the course provided us with the knowledge base necessary for carrying out this research.",
+    "p5": "To our family and friends, for their unconditional support and understanding during the moments of absence necessary for the completion of this work.",
+    "p6": "To all who, directly or indirectly, contributed to the realization of this research on Immersive Virtual Reality."
+  },
+  "introducao": {
+    "title": "INTRODUCTION",
+    "p1": "Virtual Reality (VR) has emerged in recent decades as one of the most promising and revolutionary areas of computer science. Its ability to create three-dimensional synthetic environments with which users can interact in a natural and intuitive way represents a fundamental paradigm in the evolution of the human-computer interface.",
+    "p2": "The concept of Virtual Reality transcends the simple presentation of three-dimensional graphics on a screen. It involves the creation of immersive experiences that engage multiple human senses - sight, hearing, touch, and potentially smell and taste - to transport the user to a completely new world, whether it be a faithful recreation of reality, a simulation of impossible or dangerous environments, or an abstract visualization of complex data and concepts.",
+    "p3": "From Ivan Sutherland's first experiments in the 1960s with the \"Sword of Damocles\", considered the first virtual reality system, to today's sophisticated contemporary systems, VR technology has come a long way. Advances in graphics processing, computing power, miniaturization of electronic components, and development of new algorithms have made it possible to create increasingly convincing and accessible virtual experiences.",
+    "p4": "This work presents a comprehensive analysis of the main forms and applications of Immersive Virtual Reality, exploring its fundamental concepts, enabling technologies, and impacts on various areas of human knowledge. Our goal is to consolidate understanding of this emerging technology, demonstrating its transformative potential and future directions for its development.",
+    "p5": "To fully understand Virtual Reality, it is first necessary to establish the fundamental concepts that underpin it. Thus, we begin our analysis by exploring essential notions such as Cyberspace, Space, and Cybertime, which provide the conceptual framework necessary to understand how virtual environments are created and experienced.",
+    "p6": "Next, we examine the various forms that Virtual Reality can take - from simulation systems to augmented reality, telepresence, and cyborg interfaces - demonstrating the versatility and breadth of this technology. Particular attention is given to aspects of immersion, interaction, and involvement, the three fundamental pillars that define the quality and effectiveness of a VR experience.",
+    "p7": "The implementation of Virtual Reality systems requires specialized and sophisticated hardware. Therefore, we dedicate an entire chapter to the analysis of devices that make VR possible: visual displays (from HMDs to CAVE systems), motion tracking systems, high-performance graphics processors, and haptic interfaces that provide tactile and force feedback.",
+    "p8": "The applicability of Virtual Reality extends to virtually all areas of human endeavor. From medical applications - such as surgical training and phobia treatment - to education, entertainment, architecture, engineering, and even religion and art, VR is transforming the way we work, learn, and relate to information and to each other.",
+    "p9": "This work was developed through extensive bibliographic research, including specialized books, scientific articles from international journals, online resources from VR research centers, technical documentation from manufacturers, proceedings from specialized conferences (such as SIGGRAPH and IEEE VR), as well as lectures and workshops given by specialists in the field.",
+    "p10": "The methodology employed sought not only to compile existing information, but also to analyze it critically, identifying trends, challenges, and opportunities in the field of Immersive Virtual Reality. Our goal is for this work to serve not only as a historical document of the state of the art of VR at the end of the 1990s, but also as a useful reference source for students, researchers, and professionals interested in this fascinating area of technology.",
+    "p11": "We invite the reader to explore with us this virtual universe, discovering how technology is redefining the boundaries between the real and the virtual, between the possible and the imaginary, and how Immersive Virtual Reality is shaping the future of human-computer interaction."
+  },
+  "indice": {
+    "title": "TABLE OF CONTENTS",
+    "chapter1": {
+      "title": "Chapter 1 - Fundamental Concepts",
+      "s1": "1.1 Cyberspace",
+      "s2": "1.2 Space",
+      "s3": "1.3 Cybertime"
+    },
+    "chapter2": {
+      "title": "Chapter 2 - What Is Virtual Reality",
+      "s1": "2.1 Brief History",
+      "s2": "2.2 Definitions",
+      "s3": "2.2.1 Immersion",
+      "s4": "2.2.2 Involvement",
+      "s5": "2.2.3 Immersion"
+    },
+    "chapter3": {
+      "title": "Chapter 3 - Forms of Immersive Virtual Reality",
+      "s1": "3.1 Simulation VR",
+      "s2": "3.2 Projection Virtual Reality",
+      "s3": "3.3 Augmented Reality (Enhanced Reality)",
+      "s4": "3.4 Physical Devices",
+      "s5": "3.5 Telepresence",
+      "s6": "3.6 Visually Coupled Displays",
+      "s7": "3.7 Desktop Virtual Reality (Desktop VR)",
+      "s8": "3.8 Hypertext",
+      "s9": "3.9 3D Sound",
+      "s10": "3.9 Cyborg"
+    },
+    "chapter4": {
+      "title": "Chapter 4 - Virtual Reality Devices",
+      "s1": "4.1 Visual Devices",
+      "s2": "4.2 Tracking Systems",
+      "s3": "4.3 Image Processing",
+      "s4": "4.4 Input Devices"
+    },
+    "chapter5": {
+      "title": "Chapter 5 - Applicability",
+      "s1": "5.1 Biopsychosocial Disorders",
+      "s2": "5.2 Medicine",
+      "s3": "5.3 Architecture and Construction",
+      "s4": "5.4 Art",
+      "s5": "5.5 Business",
+      "s6": "5.6 Disabilities",
+      "s7": "5.7 Education and Training",
+      "s8": "5.8 Engineering",
+      "s9": "5.9 Entertainment",
+      "s10": "5.10 Marketing",
+      "s11": "5.11 Military",
+      "s12": "5.12 Religion",
+      "s13": "5.13 Sex",
+      "s14": "5.14 Virtual Communities",
+      "s15": "5.15 Virtual Cycling Tour"
+    },
+    "chapter6": {
+      "title": "Final Considerations",
+      "s1": "Bibliography",
+      "s2": "Glossary"
+    }
+  },
+  "about": {
+    "title": "About the Author",
+    "authors": "Authors",
+    "author1Name": "Raed Nadim Aboul Hosn",
+    "author1Role": "Data Processing Technologist",
+    "author2Name": "Claudia Pereira",
+    "author3Name": "Jackson Costa",
+    "author2Role": "Data Processing Technologist",
+    "orientation": "Orientation",
+    "advisor": "Advisor:",
+    "advisorName": "Prof. Ms. Marianne Kogut Eliasquevici",
+    "coAdvisor": "Co-advisor:",
+    "coAdvisorName": "Prof. Dr. Gustavo Augusto Lima de Campos",
+    "methodologicalSupervision": "Methodological Supervision:",
+    "methodologicalSupervisorName": "Prof. Ms. Maria de Fátima Frayha de Souza",
+    "computerScience": "Computer Science"
+  },
+  "contact": {
+    "email": "email:"
+  },
+  "footer": {
+    "copyright": "© 1999 Centro de Ensino Superior do Pará - CESUPA. All rights reserved."
+  },
+  "sidebar": {
+    "content": "Content",
+    "mainPage": "Main Page",
+    "index": "Table of Contents",
+    "finalConsiderations": "Final Considerations",
+    "bibliography": "Bibliography",
+    "glossary": "Glossary"
+  },
+  "navigation": {
+    "previousChapter": "Previous Chapter",
+    "mainPage": "Main Page",
+    "nextChapter": "Next Chapter",
+    "chapter": "Chapter"
+  },
+  "languageSwitch": {
+    "en": "English",
+    "pt": "Português"
+  }
+}
