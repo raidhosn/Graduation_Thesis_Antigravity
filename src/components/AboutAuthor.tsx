@@ -65,12 +65,14 @@ const AboutAuthor = () => {
     ];
 
     const timeline = [
-        { year: "1999", company: "CESUPA", role: "VR Thesis" },
-        { year: "2001", company: "Microsoft", role: "Xbox • ISV" },
-        { year: "2006", company: "Dell", role: "Enterprise" },
-        { year: "2011", company: "IBM", role: "SCCM" },
-        { year: "2017", company: "E-Commerce", role: "Architecture" },
-        { year: "2021", company: "Microsoft", role: "Azure", isCurrent: true },
+        { year: "2000", company: "CESUPA University", role: "Graduated with a Bachelor of Science in Computer Science" },
+        { year: "2005", company: "Microsoft", role: "Xbox Games Software Test Engineer" },
+        { year: "2006", company: "Dell Computers", role: "Trilingual Complex Systems Senior Analyst" },
+        { year: "2009", company: "Microsoft", role: "Trilingual Partner Technical Consultant | Pre-Sales Consultant" },
+        { year: "2011", company: "IBM", role: "SCCM Engineer | Software Distribution & Infrastructure Support" },
+        { year: "2015", company: "Al Jabal Hospital", role: "Senior Information Technology Specialist" },
+        { year: "2017", company: "Apollo Hair System", role: "E-Commerce Architect | Platform Engineer" },
+        { year: "Present", company: "Microsoft", role: "Senior Trilingual Azure Support Engineer", isCurrent: true },
     ];
 
     return (
@@ -235,64 +237,71 @@ const AboutAuthor = () => {
                         </div>
 
                         {/* Desktop Timeline (Horizontal) */}
-                        <div className="hidden md:flex justify-between items-start relative pt-4">
+                        <div className="hidden md:flex justify-between items-start relative px-6">
                             {/* Timeline Line */}
                             <div
-                                className="absolute top-6 left-0 right-0 h-0.5 z-0"
+                                className="absolute top-6 left-0 right-0 h-0.5 z-0 mx-14"
                                 style={{ background: 'linear-gradient(90deg, #4A9B9B 0%, #E8F4F4 100%)' }}
                             ></div>
 
                             {timeline.map((item, idx) => (
                                 <div
                                     key={idx}
-                                    className="flex flex-col items-center text-center relative z-10 flex-1 max-w-[140px] group cursor-default"
+                                    className="flex flex-col items-center text-center relative z-10 flex-1 group cursor-default"
                                 >
                                     {/* Dot */}
                                     <div className={cn(
-                                        "w-3 h-3 rounded-full border-[3px] border-white bg-[#4A9B9B] mb-4 shadow-[0_0_0_3px_#E8F4F4] transition-all duration-200 group-hover:scale-125",
-                                        (idx === 0 || idx === timeline.length - 1) && "w-4 h-4"
+                                        "w-3 h-3 rounded-full border-[3px] border-white bg-[#4A9B9B] mb-5 shadow-[0_0_0_3px_#E8F4F4] transition-all duration-200 group-hover:scale-125",
+                                        (idx === 0 || item.isCurrent) && "w-4 h-4"
                                     )}></div>
 
                                     <span
-                                        className="text-[1.25rem] font-semibold text-[#2D3748] mb-1 group-hover:text-[#4A9B9B] transition-colors"
-                                        style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
+                                        className="text-[1.125rem] font-bold text-[#2D3748] mb-1 group-hover:text-[#4A9B9B] transition-colors whitespace-nowrap"
+                                        style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}
                                     >
                                         {item.year}
                                     </span>
-                                    <span className="text-[0.8125rem] font-medium text-[#4A5568]" style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
+                                    <span className="text-[0.8125rem] font-bold text-[#2D3748] mb-1.5 px-2" style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
                                         {item.company}
                                     </span>
-                                    <span className="text-[0.75rem] text-[#718096]" style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
+                                    <span className="text-[0.625rem] text-[#718096] leading-relaxed font-medium px-1 max-w-[130px]" style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
                                         {item.role}
                                     </span>
                                 </div>
                             ))}
                         </div>
 
-                        {/* Mobile Timeline (Wrapped Grid) */}
-                        <div className="md:hidden flex flex-wrap gap-6 justify-center">
+                        {/* Mobile Timeline (Vertical) */}
+                        <div className="md:hidden flex flex-col gap-10 pl-4">
                             {timeline.map((item, idx) => (
                                 <div
                                     key={idx}
-                                    className="flex flex-col items-center text-center w-[calc(33.333%-1rem)]"
+                                    className="flex gap-6 relative"
                                 >
+                                    {/* Vertical Line */}
+                                    {idx !== timeline.length - 1 && (
+                                        <div className="absolute left-[7px] top-6 bottom-[-32px] w-0.5 bg-[#E8F4F4]"></div>
+                                    )}
+
                                     <div className={cn(
-                                        "w-3 h-3 rounded-full bg-[#4A9B9B] mb-3",
-                                        (idx === 0 || idx === timeline.length - 1) && "w-4 h-4"
+                                        "w-4 h-4 rounded-full border-[3px] border-white bg-[#4A9B9B] relative z-10 shrink-0 mt-1 shadow-[0_0_0_2px_#E8F4F4]",
+                                        item.isCurrent && "bg-[#2D7575]"
                                     )}></div>
 
-                                    <span
-                                        className="text-[1.25rem] font-semibold text-[#2D3748] mb-1"
-                                        style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
-                                    >
-                                        {item.year}
-                                    </span>
-                                    <span className="text-[0.8125rem] font-medium text-[#4A5568]" style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
-                                        {item.company}
-                                    </span>
-                                    <span className="text-[0.75rem] text-[#718096]" style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
-                                        {item.role}
-                                    </span>
+                                    <div className="flex flex-col text-left">
+                                        <span
+                                            className="text-[1.125rem] font-bold text-[#2D3748] mb-0.5"
+                                            style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}
+                                        >
+                                            {item.year}
+                                        </span>
+                                        <span className="text-[0.875rem] font-bold text-[#2D3748] mb-1" style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
+                                            {item.company}
+                                        </span>
+                                        <span className="text-[0.75rem] text-[#718096] leading-snug font-medium" style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
+                                            {item.role}
+                                        </span>
+                                    </div>
                                 </div>
                             ))}
                         </div>
