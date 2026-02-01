@@ -18,7 +18,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
+      <BrowserRouter basename="/Graduation_Thesis_Antigravity">
         <LanguageRedirect />
         <Routes>
           {/* Root redirects to /en */}
