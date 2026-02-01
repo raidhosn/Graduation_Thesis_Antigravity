@@ -5,7 +5,6 @@ import {
     Mail,
     Github,
     Linkedin,
-    Twitter,
     FileText,
     Download,
     BookOpen,
@@ -15,6 +14,16 @@ import {
 import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
 import { cn } from "@/lib/utils";
 import profilePhoto from "@/assets/profile-photo.jpg";
+
+const XIcon = ({ className }: { className?: string }) => (
+    <svg
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        className={className}
+    >
+        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+    </svg>
+);
 
 const AboutAuthor = () => {
     const { t, i18n } = useTranslation();
@@ -52,7 +61,7 @@ const AboutAuthor = () => {
         { icon: Mail, href: "mailto:raidhosn1972@gmail.com", label: "Email Raed" },
         { icon: Github, href: "https://github.com/raidhosn", label: "Raed's GitHub" },
         { icon: Linkedin, href: "https://linkedin.com/in/raid-aboul-hosn", label: "Raed's LinkedIn profile" },
-        { icon: Twitter, href: "https://twitter.com/raidhosn", label: "Raed's Twitter/X" },
+        { icon: XIcon, href: "https://x.com/raidhosnibm", label: "Raed's X profile" },
     ];
 
     const timeline = [
@@ -95,10 +104,10 @@ const AboutAuthor = () => {
                     {/* Tile 2: Identity */}
                     <div className="col-span-12 md:col-span-7 md:row-span-2 bg-white rounded-2xl p-8 md:p-10 shadow-sm border border-[#EDF2F7] transition-all duration-300 hover:-translate-y-1 hover:shadow-xl flex flex-col justify-center">
                         <h1
-                            className="text-[2rem] md:text-[2.75rem] leading-[1.15] font-semibold text-[#2D3748] mb-2 tracking-[-0.5px]"
+                            className="text-[2rem] md:text-[2.75rem] leading-[1.15] font-semibold text-[#2D3748] mb-2 tracking-[-0.5px] whitespace-nowrap"
                             style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
                         >
-                            Raed Nadim<br />Aboul Hosn
+                            Raed Nadim Aboul Hosn
                         </h1>
                         <p
                             className="text-[1.25rem] italic text-[#4A9B9B] mb-8"
@@ -127,7 +136,7 @@ const AboutAuthor = () => {
                                     aria-label={link.label}
                                     className="w-11 h-11 flex items-center justify-center rounded-lg text-[#718096] hover:bg-[#E8F4F4] hover:text-[#4A9B9B] hover:border-[#E8F4F4] border border-transparent transition-all duration-150"
                                 >
-                                    <link.icon className="w-5 h-5" strokeWidth={2} />
+                                    <link.icon className="w-5 h-5" />
                                 </a>
                             ))}
                         </nav>
