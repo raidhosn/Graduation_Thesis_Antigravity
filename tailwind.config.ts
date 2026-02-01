@@ -14,14 +14,17 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ['Georgia', 'Crimson Text', 'Times New Roman', 'serif'],
-        serif: ['Georgia', 'Crimson Text', 'Times New Roman', 'serif'],
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+        serif: ['Merriweather', 'Georgia', 'serif'],
       },
       fontSize: {
         'body': ['1rem', { lineHeight: '1.6' }],
         'body-lg': ['1.125rem', { lineHeight: '1.7' }],
       },
       colors: {
+        'teal': {
+          700: '#2a7a85',
+        },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

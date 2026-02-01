@@ -1015,7 +1015,35 @@ export const Chapter8PT = () => (
   </>
 );
 
+// Introduction content component
+export const IntroducaoPT = () => (
+  <>
+    <p>A expansão rápida dos computadores pessoais, programas educacionais, aplicativos, das redes eletrônicas de dados, BBSs, mais recentemente da Internet e de uma subcultura hacker, entre outras, impulsionaram as pesquisas em direção a idéia da Realidade Virtual (RV), que inicialmente contavam com escassos investimentos. Os sofisticados equipamentos necessários para a plena utilização da RV eram excessivamente caros para os padrões das indústrias de hardware do final da década de 70.</p>
+    
+    <p>Ao longo dos últimos vinte anos, a RV emergiu consideravelmente, face aos grandes avanços tecnológicos, o crescimento das indústrias de hardware e de softwares, e um maior investimento por parte do governo em pesquisas científicas, que tem possibilitado o desenvolvimento de equipamentos de estrutura tecnológica de ponta, fazendo com que as pesquisas em sistemas de telepresença, o uso do computador como um novo paradigma de interface com o usuário utilizando dispositivos multi-sensoriais, a navegação em espaços tridimensionais, a imersão no contexto da aplicação e interação em tempo real, e paralelamente, a visualização científica em ambientes distribuídos nesta área, deixem de ser exclusividade de instituições de pesquisa e/ou governamentais.</p>
+    
+    <p>Percebendo-se, portanto, a potencialidade dessa tecnologia e/ou sistema de RV como ferramenta de apoio às diversas áreas do conhecimento e principalmente como agente de mudanças no ambiente social, quer seja para a atualidade como consequentemente para a vida futura, este Trabalho de Conclusão de Curso proferi a RV, refletindo sobre as teorias, idéias, pontos de vistas e definições que alguns autores e pesquisadores difundiram acerca do assunto em questão.</p>
+    
+    <p>Para tal, no Capítulo I, serão propostos assuntos de fundamental importância no direcionamento do estudo de RV, assim como, as suas relações para com ela. Portanto, serão visto conceitos primordiais como a noção de Ciberespaço, que em poucas palavras, corresponde ao espaço mediador entre tudo e todos num nível virtual. Por conseguinte, mostrara-se a noção de Espaço Absoluto, decomposto em variadas formas, e, por último, o Cibertempo que corresponde as noções de tempo absoluto e digital.</p>
+    
+    <p>O Capitulo II, busca melhor expressar e/ou definir satisfatoriamente o que vem a ser a RV, inclusive sob diferentes interpretações e titulações (Sistema de RV, Tecnologia de RV, Ambiente Virtual,...). Seguidamente, referenciara-se brevemente o histórico de seu surgimento.</p>
+    
+    <p>Quanto ao Capítulo III, o enfoque será para alguns Dispositivos para RV, e principalmente para a sua participação na criação de experiências imersivas quando combinadas e de como encontram o sentido de presença. Tais tecnologias, residem sob as seguintes categorias: Dispositivos Visuais, Sistemas de Rastreamento, Dispositivos de Entrada, Sistemas Sonoros, Dispositivos "Haptic", Hardwares de Computação e Gráficos e Ferramentas de Software.</p>
+    
+    <p>A finalidade, é mostrar em detalhes, alguns destes componentes descrevendo suas principais performances quanto a imersividade em RV. O manuseio destas informações servem como introdução e como guia, para pessoas interessados em localizar uma instalação de RV.</p>
+    
+    <p>Consequentemente, as diferentes Formas de RV (Arquitetura Hipertexto, Telepresença, RV de Simulação, RV de Projeção, Realidade Realçada, "Displays Visualmente Casados", RV de Mesa e Ciborgs) serão vistas no Capítulo IV, observadas também a luz do grau de imersão do usuário quando em um ambiente virtual simulado.</p>
+    
+    <p>Outro importante aspecto da RV, será visto no Capítulo V, tratará de suas Aplicações nos diferentes ramos da ciência.</p>
+    
+    <p>Finalmente, analisar-se-á os aspectos e/ou as formas como coexistiremos a partir dos adventos tecnológicos e das expressões maquínicas que expressam o imaginário e o desejo, e portanto, como o campo da RV exigirá as atenções e farão com que a cooperação mútua, surja como necessidade de entendimento de nossas atividades.</p>
+    
+    <p>Este é um trabalho exploratório, que busca uma síntese abrangente sem excessivo rigor em suas definições. Se conseguir de alguma forma lançar sementes de reflexão e discussão sobre questões inter-disciplinares, sociais, ambientais ou filosóficas, já terá atingido seus objetivos.</p>
+  </>
+);
+
 export const chaptersContentPT = {
+  0: IntroducaoPT,
   1: Chapter1PT,
   2: Chapter2PT,
   3: Chapter3PT,

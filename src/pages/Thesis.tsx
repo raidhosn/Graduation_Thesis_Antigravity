@@ -10,41 +10,41 @@ import { getChapterContent } from "@/data/chapters";
 import { chapterSubsections, scrollToAnchorWithOffset } from "@/hooks/useTocNavigation";
 import { validateAnchors, getChapterFromAnchor, logNavigationEvent } from "@/hooks/useTocValidation";
 
-// Chapter IDs for iteration - translations come from i18n
-const chapterIds = [1, 2, 3, 4, 5, 6, 7, 8];
+// Chapter IDs for iteration - 0 = Introduction, translations come from i18n
+const chapterIds = [0, 1, 2, 3, 4, 5, 6, 7, 8];
 
 const Thesis = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const { t, i18n } = useTranslation(['common', 'thesis']);
-  const [activeSection, setActiveSection] = useState<string | null>("chapter-1");
+  const [activeSection, setActiveSection] = useState<string | null>("chapter-0");
   const readingPanelRef = useRef<HTMLDivElement>(null);
   const [validationComplete, setValidationComplete] = useState(false);
-  
+
   // Get current language from path - STRICT: default to 'en', never fallback to 'pt'
   const pathLang = location.pathname.split('/')[1];
   const currentLang = pathLang === 'pt' ? 'pt' : 'en';
-  
+
   // Sync i18n language with URL BEFORE first render
   useEffect(() => {
     if (i18n.language !== currentLang) {
       i18n.changeLanguage(currentLang);
     }
     document.documentElement.lang = currentLang;
-    
+
     // Update document title based on locale
-    document.title = currentLang === 'en' 
-      ? 'Immersive Virtual Reality - Thesis' 
+    document.title = currentLang === 'en'
+      ? 'Immersive Virtual Reality - Thesis'
       : 'Realidade Virtual Imersiva - Tese';
   }, [currentLang, i18n]);
 
   // Validate anchors after content renders (dev mode only)
   useEffect(() => {
     if (validationComplete) return;
-    
+
     // Compute chapter ID inside effect to avoid dependency issues
     const chapterId = parseInt(activeSection?.replace('chapter-', '') || '1');
-    
+
     const timer = setTimeout(() => {
       const result = validateAnchors(readingPanelRef, chapterId);
       setValidationComplete(true);
@@ -54,7 +54,7 @@ const Thesis = () => {
         console.error('[TOC Validation] Critical validation errors found:', result.errors);
       }
     }, 500);
-    
+
     return () => clearTimeout(timer);
   }, [activeSection, validationComplete]);
 
@@ -63,19 +63,19 @@ const Thesis = () => {
     const hash = location.hash;
     if (hash) {
       const anchorId = hash.replace('#', '');
-      
+
       // Determine active chapter from anchor
       const chapterId = getChapterFromAnchor(anchorId);
       if (chapterId) {
         setActiveSection(`chapter-${chapterId}`);
       }
-      
+
       // Delay scroll to ensure content is rendered, use container ref
       const scrollTimer = setTimeout(async () => {
         const result = await scrollToAnchorWithOffset(anchorId, readingPanelRef);
         logNavigationEvent('deeplink', anchorId, result.success);
       }, 200);
-      
+
       return () => clearTimeout(scrollTimer);
     }
   }, [location.hash]);
@@ -84,7 +84,7 @@ const Thesis = () => {
   const handleChapterClick = useCallback(async (chapterId: number) => {
     setActiveSection(`chapter-${chapterId}`);
     setValidationComplete(false); // Re-validate on chapter change
-    
+
     // Small delay to allow state update, then scroll to chapter heading
     setTimeout(async () => {
       const anchorId = `chapter-${chapterId}`;
@@ -101,7 +101,7 @@ const Thesis = () => {
 
   // Get current chapter ID
   const currentChapterId = parseInt(activeSection?.replace('chapter-', '') || '1');
-  
+
   // Get chapter content component based on STRICT locale
   const ChapterContent = getChapterContent(currentChapterId, currentLang);
 
@@ -139,10 +139,10 @@ const Thesis = () => {
                 <h2 className="sidebar-header-title px-2 pb-3">
                   {t('sidebar.index')}
                 </h2>
-                
+
                 {/* Header Divider - 1px, full width, #E5E5E5 */}
                 <div className="h-px bg-[#E5E5E5] -mx-2" />
-                
+
                 {/* Main Page Button - 12-14px spacing from divider */}
                 <button
                   onClick={() => navigate(`/${currentLang}`)}
@@ -155,29 +155,50 @@ const Thesis = () => {
                   </span>
                 </button>
 
-                {/* Chapters List */}
+                {/* Dedications and Acknowledgments - positioned below Main Page, above Introduction */}
+                <button
+                  onClick={() => navigate(`/${currentLang}/dedications`)}
+                  className="sidebar-chapter"
+                  aria-label={t('sidebar.dedications')}
+                >
+                  <span className="sidebar-chapter-text">
+                    {t('sidebar.dedications')}
+                  </span>
+                </button>
+
+                {/* Introduction - positioned below Dedications, above Chapter 1 */}
+                <button
+                  onClick={() => handleChapterClick(0)}
+                  className={`sidebar-chapter ${activeSection === 'chapter-0' ? "active" : ""}`}
+                >
+                  <span className="sidebar-chapter-text">
+                    {t('sidebar.introduction')}
+                  </span>
+                </button>
+
+                {/* Chapters List - filter out chapter 0 since it's rendered as Introduction above */}
                 <div className="space-y-0.5 pt-1">
-                  {chapterIds.map((chapterId) => {
+                  {chapterIds.filter(id => id !== 0).map((chapterId) => {
                     const subsections = chapterSubsections[chapterId] || [];
                     const isActive = activeSection === `chapter-${chapterId}`;
-                    
+
                     return (
                       <div key={chapterId}>
                         {/* Chapter Button */}
-                        <button 
-                          onClick={() => handleChapterClick(chapterId)} 
-                          className={`sidebar-chapter ${isActive ? "active" : ""}`} 
+                        <button
+                          onClick={() => handleChapterClick(chapterId)}
+                          className={`sidebar-chapter ${isActive ? "active" : ""}`}
                         >
                           <div className="flex items-center gap-2">
                             <span className="sidebar-chapter-number">
                               {chapterId}.
                             </span>
                             <span className="sidebar-chapter-text">
-                              {t(`thesis:chapters.chapter${chapterId}.title`)}
+                              {t(`indice.chapter${chapterId}.title`)}
                             </span>
                           </div>
                         </button>
-                        
+
                         {/* Subsections - show when this chapter is active */}
                         {isActive && subsections.length > 0 && (
                           <div className="mt-0.5 space-y-0.5">
@@ -202,7 +223,7 @@ const Thesis = () => {
         </aside>
 
         {/* Main Content - Scrollable Reading Panel */}
-        <main 
+        <main
           ref={readingPanelRef}
           className="flex-1 h-[calc(100vh-73px)] overflow-y-auto scroll-smooth"
         >
@@ -213,22 +234,22 @@ const Thesis = () => {
                   <Book className="w-4 h-4" />
                   <span>{t(`thesis:chapters.chapter${currentChapterId}.title`)}</span>
                 </div>
-                
+
                 <h1 id={`chapter-${currentChapterId}`} className="animate-slide-up" tabIndex={-1}>
                   {t(`thesis:chapters.chapter${currentChapterId}.title`)}
                 </h1>
-                
+
                 {t(`thesis:chapters.chapter${currentChapterId}.subtitle`) && (
-                  <p 
-                    className="text-lg text-accent font-normal mb-6 animate-slide-up" 
+                  <p
+                    className="text-lg text-accent font-normal mb-6 animate-slide-up"
                     style={{ animationDelay: "0.1s" }}
                   >
                     {t(`thesis:chapters.chapter${currentChapterId}.subtitle`)}
                   </p>
                 )}
 
-                <div 
-                  className="thesis-content animate-fade-in" 
+                <div
+                  className="thesis-content animate-fade-in"
                   style={{ animationDelay: "0.2s" }}
                 >
                   {/* Render chapter content from locale-specific dataset */}
@@ -236,8 +257,8 @@ const Thesis = () => {
                     <ChapterContent />
                   ) : (
                     <p className="text-muted-foreground italic">
-                      {currentLang === 'en' 
-                        ? '[Translation pending - Content not yet available in English]' 
+                      {currentLang === 'en'
+                        ? '[Translation pending - Content not yet available in English]'
                         : '[Tradução pendente - Conteúdo ainda não disponível em Português]'}
                     </p>
                   )}
@@ -246,21 +267,21 @@ const Thesis = () => {
 
               <ChapterNavigation
                 onPrevious={() => {
-                  const prevChapter = Math.max(1, currentChapterId - 1);
+                  const prevChapter = Math.max(0, currentChapterId - 1);
                   setActiveSection(`chapter-${prevChapter}`);
                   setTimeout(() => {
                     readingPanelRef.current?.scrollTo({ top: 0, behavior: 'smooth' });
                   }, 50);
-                }} 
+                }}
                 onNext={() => {
-                  const nextChapter = Math.min(chapterIds.length, currentChapterId + 1);
+                  const nextChapter = Math.min(8, currentChapterId + 1);
                   setActiveSection(`chapter-${nextChapter}`);
                   setTimeout(() => {
                     readingPanelRef.current?.scrollTo({ top: 0, behavior: 'smooth' });
                   }, 50);
                 }}
-                showPrevious={currentChapterId > 1} 
-                showNext={currentChapterId < chapterIds.length} 
+                showPrevious={currentChapterId > 0}
+                showNext={currentChapterId < 8}
               />
             </Card>
           </div>

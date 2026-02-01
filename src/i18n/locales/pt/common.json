@@ -19,14 +19,25 @@
     "readThesisEn": "EN",
     "readThesisPt": "PT"
   },
-  "dedicatorias": {
-    "title": "DEDICATÓRIAS E AGRADECIMENTOS",
-    "p1": "Este trabalho é dedicado a todos aqueles que acreditaram no potencial da Realidade Virtual como ferramenta transformadora da interação humano-computador.",
-    "p2": "Agradecemos aos nossos orientadores, Profª. Ms. Marianne Kogut Eliasquevici e Prof. Dr. Gustavo Augusto Lima de Campos, pela dedicação, paciência e conhecimento compartilhado durante todo o desenvolvimento desta pesquisa.",
-    "p3": "À Profª. Ms. Maria de Fátima Frayha de Souza, pela supervisão metodológica que foi fundamental para a estruturação deste trabalho.",
-    "p4": "Aos nossos professores do CESUPA, que ao longo do curso nos proporcionaram a base de conhecimento necessária para a realização desta pesquisa.",
-    "p5": "Aos nossos familiares e amigos, pelo apoio incondicional e compreensão durante os momentos de ausência necessários para a conclusão deste trabalho.",
-    "p6": "A todos que, direta ou indiretamente, contribuíram para a realização desta pesquisa sobre Realidade Virtual Imersiva."
+  "dedications": {
+    "title": "Dedicatórias e Agradecimentos",
+    "dedicationsTitle": "DEDICATÓRIAS",
+    "acknowledgementsTitle": "AGRADECIMENTOS",
+    "claudiaDedication1": "A minha formação como profissional não poderia ter sido concretizada sem a ajuda de meus amáveis e eternos pais Célio e Cleide Jackson, que, no decorrer da minha vida, proporcionaram-me, além de extenso carinho e amor, os conhecimentos da integridade, da perseverança e de procurar sempre em Deus à força maior para o meu desenvolvimento como ser humano. Por essa razão, gostaria de dedicar e reconhecer à vocês, minha imensa gratidão e sempre amor.",
+    "claudiaDedication2": "À Deus, dedico o meu agradecimento maior, porque têm sido tudo em minha vida. Um agradecimento especial aos meus queridos maninhos Cleber, Cleice e Celice Jackson, que permaneceram sempre ao meu lado, nos bons e maus momentos; ao meu querido amor Augusto Almeida de Souza, que além de me fazer feliz, ajudou-me, durante todo o percurso de minha vida acadêmica, compreendendo-me e ensinando-me para que eu conquistasse um lugar ao sol; à minha maravilhosa avó Lucila Duarte Pereira, que sempre me deu atenção, carinho e preciosos conselhos e a todos aqueles que direta ou indiretamente, contribuíram para esta imensa felicidade que estou sentido nesse momento.",
+    "claudiaDedication3": "À todos vocês, meu muito obrigado.",
+    "claudiaName": "Claudia Pereira Jackson Costa",
+    "raidDedication": "A Deus, quando algumas vezes, sentindo-me desacreditado e perdido nos meus objetivos, ideais ou minha pessoa, me fez vivenciar a delicia de me formar.\n\nAos meus queridos papai Nadim (Abou Raid) e mamãe Afaf (Am Raid) Aboul Hosn, que me trouxeram com todo o amor e carinho a este mundo, dedicaram, cuidaram e doaram incondicionalmente seu sangue e suor em forma de amor e trabalho por mim, despertando e alimentando em minha personalidade, ainda na infância, a sede pelo conhecimento e a importância deste em minha vida.\n\nAs maninhas Nadia e Chadia Aboul Hosn que sempre elevaram minha auto estima e principalmente por acreditarem e reascenderem em mim, o interesse pelo antigo sonho de me formar na área de Informática.\n\nAo meu falecido Avô Mohamed Amar Aboul Hosn (Sheikh Abou Salman), no qual espelhei-me em sua espiritualidade, humanismo e sabedoria.\n\nAos amigos(as), familiares, professores(as) e todos aqueles(as) que cruzaram em minha vida, participando de alguma forma na construção e realização deste tão desejado sonho de carregar o canudo de minha formatura (ingrediente fundamental para minha felicidade).",
+    "raidName": "Raid Nadim Aboul Hosn.",
+    "acknowledgements1": "Ao Prof. Ms. Arnaldo A. Almeida de Souza Júnior, pelos textos traduzidos, orientação, seu grande desprendimento em ajudar-nos e amizade sincera.",
+    "acknowledgements2": "Á Prof.a Ms. Marianne Kogut Eliasquevici e ao Prof. Dr. Gustavo Augusto Lima de Campos, pela orientação deste Trabalho de Conclusão de Curso e amizade sincera.",
+    "acknowledgements3": "Á Prof.a Ms. Maria de Fátima Frayha de Souza, pela supervisão metodológica; a Prof.a Ms. Leda Mara de Oliveira Monteiro; ao Prof. Izidório Cabral; ao Dr. Jean Paul Jacob; ao Prof. Dr. Claudio Kirner; ao Prof. Dr. Marcus Palacius; ao Prof. Dr. André Lemos; ao Ms. Bianchi Serique Meignins; ao Departamento de Letras da UFPa., pela orientação e material fornecido.",
+    "acknowledgements4": "Aos amigos Walid Aboulhosn e Marcos Paulo de O. Salles Abreu, Tio Nabih Abou El Hosn pelo incentivo e grande ajuda com o fornecimento de material para a realização deste trabalho. Á todos vocês, o nosso muito obrigado.",
+    "acknowledgementsAuthors": "Claudia Pereira Jackson Costa\nRaid Nadim Aboul Hosn"
+  },
+  "abstract": {
+    "title": "RESUMO",
+    "content": "Levando em consideração o desenvolvimento da *Realidade Virtual* nos últimos anos, este trabalho apresenta as principais formas de RV, considerando seu papel na criação de experiências imersivas, que é o objetivo principal deste estudo. Dessa forma, é necessário apresentar, entre outros, as noções de *Ciberespaço*, *Cibertempo*, *Espaço* e *Tempo Absoluto*, que fornecem uma visão geral da área. Posteriormente, as diversas formas imersivas de RV são discutidas, juntamente com *Telepresença*, *Hipertexto* e *Ciborgues*, propondo-os como um novo paradigma de interface para interação com o usuário. Através de exemplos, as aplicações existentes de RV são examinadas em diversas áreas do conhecimento. Portanto, o presente trabalho conta com extensos recursos bibliográficos obtidos através de diversos métodos de pesquisa (Internet, livros, centros de pesquisa e desenvolvimento, obras publicadas e palestras), o que, de certa forma, destaca sua importância como fonte de referência."
   },
   "introducao": {
     "title": "INTRODUÇÃO",
@@ -43,15 +54,20 @@
     "p11": "Convidamos o leitor a explorar conosco este universo virtual, descobrindo como a tecnologia está redefinindo os limites entre o real e o virtual, entre o possível e o imaginário, e como a Realidade Virtual Imersiva está moldando o futuro da interação humano-computador."
   },
   "indice": {
-    "title": "ÍNDICE",
+    "title": "ÍNDICE DE CONTEÚDOS",
+    "divider": "CAPÍTULOS",
+    "preliminary": "PRELIMINAR",
+    "chapters": "CAPÍTULOS",
+    "references": "REFERÊNCIAS",
+    "dedications": "Dedicatórias e Agradecimentos",
     "chapter1": {
-      "title": "Capítulo 1 - Conceitos Fundamentais",
+      "title": "Conceitos Fundamentais",
       "s1": "1.1 O Ciberespaço",
       "s2": "1.2 O Espaço",
       "s3": "1.3 O Cibertempo"
     },
     "chapter2": {
-      "title": "Capítulo 2 - O Que É Realidade Virtual",
+      "title": "O Que É Realidade Virtual",
       "s1": "2.1 Breve Histórico",
       "s2": "2.2 Definições",
       "s3": "2.2.1 Imersão",
@@ -59,7 +75,7 @@
       "s5": "2.2.3 Imersão"
     },
     "chapter3": {
-      "title": "Capítulo 3 - Formas de Realidade Virtual Imersiva",
+      "title": "Formas de Realidade Virtual Imersiva",
       "s1": "3.1 RV de Simulação",
       "s2": "3.2 Realidade Virtual de Projeção",
       "s3": "3.3 Augmented Reality (Realidade Realçada)",
@@ -72,14 +88,14 @@
       "s10": "3.9 Ciborg"
     },
     "chapter4": {
-      "title": "Capítulo 4 - Dispositivos para Realidade Virtual",
+      "title": "Dispositivos para Realidade Virtual",
       "s1": "4.1 Dispositivos Visuais",
       "s2": "4.2 Sistemas de Rastreamento",
       "s3": "4.3 Processamento de Imagem",
       "s4": "4.4 Dispositivos de Entrada"
     },
     "chapter5": {
-      "title": "Capítulo 5 - Aplicabilidade",
+      "title": "Aplicabilidade",
       "s1": "5.1 Distúrbios Biopsicossociais",
       "s2": "5.2 Medicina",
       "s3": "5.3 Arquitetura e Construção",
@@ -100,6 +116,12 @@
       "title": "Considerações Finais",
       "s1": "Bibliografia",
       "s2": "Glossário"
+    },
+    "chapter7": {
+      "title": "Bibliografia"
+    },
+    "chapter8": {
+      "title": "Glossário"
     }
   },
   "about": {
@@ -117,7 +139,46 @@
     "coAdvisorName": "Prof. Dr. Gustavo Augusto Lima de Campos",
     "methodologicalSupervision": "Supervisão Metodológica:",
     "methodologicalSupervisorName": "Profª. Ms. Maria de Fátima Frayha de Souza",
-    "computerScience": "Ciência da Computação"
+    "computerScience": "Ciência da Computação",
+    "academicFoundation": "FORMAÇÃO ACADÊMICA",
+    "thesisLabel": "TESE",
+    "readersLabel": "LEITORES DESDE 2006",
+    "resumeLabel": "CURRÍCULO",
+    "download": "Baixar",
+    "careerJourney": "TRAJETÓRIA PROFISSIONAL",
+    "location": "Mill Creek, WA, USA",
+    "tagline": "Mais de 25 anos construindo o futuro da tecnologia — desde a **pesquisa em RV imersiva** até a infraestrutura de nuvem empresarial. Unindo a lacuna entre fundamentos teóricos e soluções escaláveis.",
+    "role": "Cientista da Computação",
+    "degree": "Bacharel em Ciência da Computação",
+    "institution": "CESUPA, Brasil • Turma de 2000",
+    "resumeVersion": "v2.4 • Jan 2026",
+    "timeline": {
+      "1999": {
+        "company": "Universidade",
+        "role": "Tese de RV"
+      },
+      "2005": {
+        "company": "IBM",
+        "role": "Engenheiro"
+      },
+      "2010": {
+        "company": "Dell",
+        "role": "Dev Sênior"
+      },
+      "2015": {
+        "company": "Saúde",
+        "role": "Arquiteto"
+      },
+      "2020": {
+        "company": "Microsoft",
+        "role": "Líder de Nuvem"
+      },
+      "present": {
+        "year": "Presente",
+        "company": "Tech Giant",
+        "role": "Principal"
+      }
+    }
   },
   "contact": {
     "email": "email:"
@@ -128,6 +189,8 @@
   "sidebar": {
     "content": "Conteúdo",
     "mainPage": "Página Inicial",
+    "dedications": "Dedicatórias e Agradecimentos",
+    "introduction": "Introdução",
     "index": "Índice",
     "finalConsiderations": "Considerações Finais",
     "bibliography": "Bibliografia",

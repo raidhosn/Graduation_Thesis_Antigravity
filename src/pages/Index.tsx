@@ -1,447 +1,407 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { BookOpen, GraduationCap, Calendar, MapPin, User, ArrowRight } from "lucide-react";
+import { BookOpen, GraduationCap, Calendar, MapPin, User, ArrowRight, Heart, Globe } from "lucide-react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { useEffect } from "react";
 import heroImage from "@/assets/hero-thesis.jpg";
 import emailIcon from "@/assets/email-icon.gif";
 import { LanguageSwitch } from "@/components/LanguageSwitch";
-import { chapterSubsections } from "@/hooks/useTocNavigation";
+import AboutAuthor from "@/components/AboutAuthor";
 
 const Index = () => {
-  const navigate = useNavigate();
-  const location = useLocation();
-  const {
-    t,
-    i18n
-  } = useTranslation();
+    const navigate = useNavigate();
+    const location = useLocation();
+    const {
+        t,
+        i18n
+    } = useTranslation();
 
-  // Get current language from path
-  const pathLang = location.pathname.split('/')[1];
-  const currentLang = pathLang === 'pt' ? 'pt' : 'en';
+    // Get current language from path
+    const pathLang = location.pathname.split('/')[1];
+    const currentLang = pathLang === 'pt' ? 'pt' : 'en';
 
-  // Sync i18n language with URL
-  useEffect(() => {
-    if (i18n.language !== currentLang) {
-      i18n.changeLanguage(currentLang);
-    }
-  }, [currentLang, i18n]);
+    // Sync i18n language with URL
+    useEffect(() => {
+        if (i18n.language !== currentLang) {
+            i18n.changeLanguage(currentLang);
+        }
+    }, [currentLang, i18n]);
 
-  // Update document language attribute
-  useEffect(() => {
-    document.documentElement.lang = currentLang;
-  }, [currentLang]);
-  const navigateToMainPage = (lang: 'en' | 'pt') => {
-    // If already on this language's main page, do nothing
-    if (currentLang === lang) {
-      return;
-    }
-    i18n.changeLanguage(lang);
-    navigate(`/${lang}`);
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
-  return <div className="min-h-screen bg-gradient-to-br from-background via-background to-muted/30">
-      {/* Language indicator in top right */}
-      <div className="fixed top-4 right-4 z-50">
-        <LanguageSwitch />
-      </div>
+    // Update document language attribute
+    useEffect(() => {
+        document.documentElement.lang = currentLang;
+    }, [currentLang]);
+    const navigateToMainPage = (lang: 'en' | 'pt') => {
+        // If already on this language's main page, do nothing
+        if (currentLang === lang) {
+            return;
+        }
+        i18n.changeLanguage(lang);
+        navigate(`/${lang}`);
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    };
+    return <div className="min-h-screen bg-gradient-to-br from-background via-background to-muted/30">
+        {/* Language indicator in top right */}
+        <div className="fixed top-4 right-4 z-50">
+            <LanguageSwitch />
+        </div>
 
-      {/* Hero Section */}
-      <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMzLjMxNCAwIDYgMi42ODYgNiA2cy0yLjY4NiA2LTYgNi02LTIuNjg2LTYtNiAyLjY4Ni02IDYtNnoiIHN0cm9rZT0iaHNsKDE5NSwgNjUlLCAyNSUpIiBzdHJva2Utb3BhY2l0eT0iMC4wNSIvPjwvZz48L3N2Zz4=')] opacity-40"></div>
-        
-        <div className="container mx-auto px-6 py-20 relative">
-          <div className="max-w-4xl mx-auto text-center">
-            <Badge className="mb-6 animate-fade-in" variant="secondary">
-              <GraduationCap className="w-3 h-3 mr-1" />
-              {t('header.graduationThesis')}
-            </Badge>
-            
-            <h1 className="mb-6 animate-slide-up bg-clip-text text-transparent bg-gradient-to-r from-primary via-primary to-accent leading-tight">
-              {t('hero.title')}
-            </h1>
-            
-            
-            <div className="mb-8 animate-fade-in" style={{
-            animationDelay: "0.15s"
-          }}>
-              <img src={heroImage} alt={t('hero.heroImageAlt')} className="max-w-2xl mx-auto shadow-lg rounded-lg" />
+        {/* Hero Section */}
+        <section className="relative overflow-hidden">
+            <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMzLjMxNCAwIDYgMi42ODYgNiA2cy0yLjY4NiA2LTYgNi02LTIuNjg2LTYtNiAyLjY4Ni02IDYtNnoiIHN0cm9rZT0iaHNsKDE5NSwgNjUlLCAyNSUpIiBzdHJva2Utb3BhY2l0eT0iMC4wNSIvPjwvZz48L3N2Zz4=')] opacity-40"></div>
+
+            <div className="container mx-auto px-6 py-20 relative">
+                <div className="max-w-4xl mx-auto text-center">
+                    <Badge className="mb-6 animate-fade-in" variant="secondary">
+                        <GraduationCap className="w-3 h-3 mr-1" />
+                        {t('header.graduationThesis')}
+                    </Badge>
+
+                    <h1 className="mb-6 animate-slide-up bg-clip-text text-transparent bg-gradient-to-r from-primary via-primary to-accent leading-tight">
+                        {t('hero.title')}
+                    </h1>
+
+
+                    <div className="mb-8 animate-fade-in" style={{
+                        animationDelay: "0.15s"
+                    }}>
+                        <img src={heroImage} alt={t('hero.heroImageAlt')} className="max-w-2xl mx-auto shadow-lg rounded-lg" />
+                    </div>
+
+                    <p style={{
+                        animationDelay: "0.2s"
+                    }} className="text-xl text-muted-foreground mb-8 animate-fade-in max-w-2xl mx-auto leading-relaxed md:text-xl">
+                        {t('hero.description')}
+                    </p>
+
+
+
+                </div>
             </div>
-            
-            <p style={{
-            animationDelay: "0.2s"
-          }} className="text-xl text-muted-foreground mb-8 animate-fade-in max-w-2xl mx-auto leading-relaxed md:text-xl">
-              {t('hero.description')}
-            </p>
+        </section>
 
-            <div className="flex flex-wrap justify-center gap-6 mb-12 animate-fade-in" style={{
-            animationDelay: "0.3s"
-          }}>
-              <div className="flex items-center gap-2 text-muted-foreground">
-                <MapPin className="w-4 h-4" />
-                <span className="text-sm">{t('hero.location')}</span>
-              </div>
-              <div className="flex items-center gap-2 text-muted-foreground">
-                <Calendar className="w-4 h-4" />
-                <span className="text-sm">{t('hero.year')}</span>
-              </div>
-              <div className="flex items-center gap-2 text-muted-foreground">
-                <User className="w-4 h-4" />
-                <span className="text-sm">{t('hero.authors')}</span>
-              </div>
+
+        {/* Abstract Section */}
+        <section className="py-16 bg-white">
+            <div className="container mx-auto px-6">
+                <div className="max-w-4xl mx-auto">
+                    {/* Top Divider */}
+                    <div className="flex items-center justify-center mb-6">
+                        <div className="h-px bg-gray-300 w-full max-w-md"></div>
+                    </div>
+
+                    {/* Title */}
+                    <h2 className="text-center text-xl font-bold font-serif uppercase tracking-widest text-gray-700 mb-6">
+                        {t('abstract.title')}
+                    </h2>
+
+                    {/* Middle Divider */}
+                    <div className="flex items-center justify-center mb-8">
+                        <div className="h-px bg-gray-300 w-full max-w-md"></div>
+                    </div>
+
+                    {/* Abstract Content */}
+                    <p className="text-base leading-relaxed text-gray-700 text-justify max-w-3xl mx-auto mb-8">
+                        {t('abstract.content').split('*').map((part, index) => {
+                            if (index % 2 === 0) {
+                                return <span key={index}>{part}</span>;
+                            } else {
+                                return <em key={index}>{part}</em>;
+                            }
+                        })}
+                    </p>
+
+                    {/* Bottom Divider */}
+                    <div className="flex items-center justify-center">
+                        <div className="h-px bg-gray-300 w-full max-w-md"></div>
+                    </div>
+                </div>
             </div>
+        </section>
 
-            {/* Two Language Buttons */}
-            <div className="flex justify-center gap-4 animate-fade-in" style={{
-            animationDelay: "0.4s"
-          }}>
-              <Button 
-                size="lg" 
-                className={`group shadow-[var(--shadow-elegant)] hover:shadow-xl transition-all duration-150 ${
-                  currentLang === 'en' 
-                    ? 'bg-teal-700 text-white border-transparent hover:bg-teal-800' 
-                    : 'bg-white text-gray-700 border border-gray-200 hover:bg-teal-50 hover:text-teal-600'
-                }`} 
-                onClick={() => navigateToMainPage('en')} 
-                aria-label="English main page"
-              >
-                <BookOpen className="w-5 h-5 mr-2" />
-                EN
-                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-              </Button>
-              <Button 
-                size="lg" 
-                className={`group shadow-[var(--shadow-elegant)] hover:shadow-xl transition-all duration-150 ${
-                  currentLang === 'pt' 
-                    ? 'bg-teal-700 text-white border-transparent hover:bg-teal-800' 
-                    : 'bg-white text-gray-700 border border-gray-200 hover:bg-teal-50 hover:text-teal-600'
-                }`} 
-                onClick={() => navigateToMainPage('pt')} 
-                aria-label="Portuguese main page"
-              >
-                <BookOpen className="w-5 h-5 mr-2" />
-                PT
-                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-              </Button>
+
+
+        {/* Table of Contents Section */}
+        <section id="indice" className="py-20 bg-gray-50">
+            <div className="container mx-auto px-6">
+                <div className="max-w-6xl mx-auto">
+                    {/* Header Title */}
+                    <h2 className="text-center text-3xl md:text-4xl font-bold font-serif uppercase mb-8">
+                        {t('indice.title')}
+                    </h2>
+
+
+                    {/* Cards Grid - 2 Columns */}
+                    <div className="space-y-8">
+                        {/* PRELIMINARY Section */}
+                        <div>
+                            <div className="flex items-center justify-center gap-4 mb-6">
+                                <div className="flex-1 h-px bg-gray-300"></div>
+                                <span className="text-xs uppercase tracking-widest text-gray-500 font-medium">
+                                    {t('indice.preliminary')}
+                                </span>
+                                <div className="flex-1 h-px bg-gray-300"></div>
+                            </div>
+
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-start">
+                                {/* 1. Dedications */}
+                                <Card
+                                    className="p-5 hover:shadow-md transition-shadow cursor-pointer bg-white border border-gray-200 rounded-lg"
+                                    onClick={() => navigate(`/${currentLang}/dedications`)}
+                                >
+                                    <div className="flex items-start gap-3">
+                                        <div className="w-8 h-8 rounded-md bg-teal-700 flex items-center justify-center shrink-0">
+                                            <Heart className="w-4 h-4 text-white" />
+                                        </div>
+                                        <div className="flex-1">
+                                            <h3 className="text-base font-bold text-gray-900">
+                                                {t('indice.dedications')}
+                                            </h3>
+                                        </div>
+                                    </div>
+                                </Card>
+
+                                {/* 2. Introduction */}
+                                <Card
+                                    className="p-5 hover:shadow-md transition-shadow cursor-pointer bg-white border border-gray-200 rounded-lg"
+                                    onClick={() => navigate(`/${currentLang}/thesis#chapter-0`)}
+                                >
+                                    <div className="flex items-start gap-3">
+                                        <div className="w-8 h-8 rounded-md bg-teal-700 flex items-center justify-center shrink-0">
+                                            <BookOpen className="w-4 h-4 text-white" />
+                                        </div>
+                                        <div className="flex-1">
+                                            <h3 className="text-base font-bold text-gray-900">
+                                                {t('sidebar.introduction')}
+                                            </h3>
+                                        </div>
+                                    </div>
+                                </Card>
+                            </div>
+                        </div>
+
+                        {/* CHAPTERS Section */}
+                        <div>
+                            <div className="flex items-center justify-center gap-4 mb-6">
+                                <div className="flex-1 h-px bg-gray-300"></div>
+                                <span className="text-xs uppercase tracking-widest text-gray-500 font-medium">
+                                    {t('indice.chapters')}
+                                </span>
+                                <div className="flex-1 h-px bg-gray-300"></div>
+                            </div>
+
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-start">
+                                {/* 3. Chapter 1 */}
+                                <Card
+                                    className="p-5 hover:shadow-md transition-shadow cursor-pointer bg-white border border-gray-200 rounded-lg"
+                                    onClick={() => navigate(`/${currentLang}/thesis#chapter-1`)}
+                                >
+                                    <div className="flex items-start gap-3">
+                                        <div className="w-8 h-8 rounded-md bg-teal-700 flex items-center justify-center text-white font-bold text-sm shrink-0">
+                                            1
+                                        </div>
+                                        <div className="flex-1">
+                                            <h3 className="text-base font-bold text-gray-900">
+                                                {t('indice.chapter1.title')}
+                                            </h3>
+                                            <ul className="mt-2 space-y-1 pl-0">
+                                                <button className="toc-card-subsection w-full text-left" onClick={(e) => { e.stopPropagation(); navigate(`/${currentLang}/thesis#chapter-1`); }}>{t('indice.chapter1.s1')}</button>
+                                                <button className="toc-card-subsection w-full text-left" onClick={(e) => { e.stopPropagation(); navigate(`/${currentLang}/thesis#chapter-1`); }}>{t('indice.chapter1.s2')}</button>
+                                                <button className="toc-card-subsection w-full text-left" onClick={(e) => { e.stopPropagation(); navigate(`/${currentLang}/thesis#chapter-1`); }}>{t('indice.chapter1.s3')}</button>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </Card>
+
+                                {/* 4. Chapter 2 */}
+                                <Card
+                                    className="p-5 hover:shadow-md transition-shadow cursor-pointer bg-white border border-gray-200 rounded-lg"
+                                    onClick={() => navigate(`/${currentLang}/thesis#chapter-2`)}
+                                >
+                                    <div className="flex items-start gap-3">
+                                        <div className="w-8 h-8 rounded-md bg-teal-700 flex items-center justify-center text-white font-bold text-sm shrink-0">
+                                            2
+                                        </div>
+                                        <div className="flex-1">
+                                            <h3 className="text-base font-bold text-gray-900">
+                                                {t('indice.chapter2.title')}
+                                            </h3>
+                                            <ul className="mt-2 space-y-1 pl-0">
+                                                <button className="toc-card-subsection w-full text-left" onClick={(e) => { e.stopPropagation(); navigate(`/${currentLang}/thesis#chapter-2`); }}>{t('indice.chapter2.s1')}</button>
+                                                <button className="toc-card-subsection w-full text-left" onClick={(e) => { e.stopPropagation(); navigate(`/${currentLang}/thesis#chapter-2`); }}>{t('indice.chapter2.s2')}</button>
+                                                <button className="toc-card-subsection w-full text-left" onClick={(e) => { e.stopPropagation(); navigate(`/${currentLang}/thesis#chapter-2`); }}>{t('indice.chapter2.s3')}</button>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </Card>
+
+                                {/* 5. Chapter 3 */}
+                                <Card
+                                    className="p-5 hover:shadow-md transition-shadow cursor-pointer bg-white border border-gray-200 rounded-lg"
+                                    onClick={() => navigate(`/${currentLang}/thesis#chapter-3`)}
+                                >
+                                    <div className="flex items-start gap-3">
+                                        <div className="w-8 h-8 rounded-md bg-teal-700 flex items-center justify-center text-white font-bold text-sm shrink-0">
+                                            3
+                                        </div>
+                                        <div className="flex-1">
+                                            <h3 className="text-base font-bold text-gray-900">
+                                                {t('indice.chapter3.title')}
+                                            </h3>
+                                            <ul className="mt-2 space-y-1 pl-0">
+                                                <button className="toc-card-subsection w-full text-left" onClick={(e) => { e.stopPropagation(); navigate(`/${currentLang}/thesis#chapter-3`); }}>{t('indice.chapter3.s1')}</button>
+                                                <button className="toc-card-subsection w-full text-left" onClick={(e) => { e.stopPropagation(); navigate(`/${currentLang}/thesis#chapter-3`); }}>{t('indice.chapter3.s2')}</button>
+                                                <button className="toc-card-subsection w-full text-left" onClick={(e) => { e.stopPropagation(); navigate(`/${currentLang}/thesis#chapter-3`); }}>{t('indice.chapter3.s3')}</button>
+                                                <button className="toc-card-subsection w-full text-left" onClick={(e) => { e.stopPropagation(); navigate(`/${currentLang}/thesis#chapter-3`); }}>{t('indice.chapter3.s4')}</button>
+                                                <button className="toc-card-subsection w-full text-left" onClick={(e) => { e.stopPropagation(); navigate(`/${currentLang}/thesis#chapter-3`); }}>{t('indice.chapter3.s5')}</button>
+                                                <button className="toc-card-subsection w-full text-left" onClick={(e) => { e.stopPropagation(); navigate(`/${currentLang}/thesis#chapter-3`); }}>{t('indice.chapter3.s6')}</button>
+                                                <button className="toc-card-subsection w-full text-left" onClick={(e) => { e.stopPropagation(); navigate(`/${currentLang}/thesis#chapter-3`); }}>{t('indice.chapter3.s7')}</button>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </Card>
+
+                                {/* 6. Chapter 4 */}
+                                <Card
+                                    className="p-5 hover:shadow-md transition-shadow cursor-pointer bg-white border border-gray-200 rounded-lg"
+                                    onClick={() => navigate(`/${currentLang}/thesis#chapter-4`)}
+                                >
+                                    <div className="flex items-start gap-3">
+                                        <div className="w-8 h-8 rounded-md bg-teal-700 flex items-center justify-center text-white font-bold text-sm shrink-0">
+                                            4
+                                        </div>
+                                        <div className="flex-1">
+                                            <h3 className="text-base font-bold text-gray-900">
+                                                {t('indice.chapter4.title')}
+                                            </h3>
+                                            <ul className="mt-2 space-y-1 pl-0">
+                                                <button className="toc-card-subsection w-full text-left" onClick={(e) => { e.stopPropagation(); navigate(`/${currentLang}/thesis#chapter-4`); }}>{t('indice.chapter4.s1')}</button>
+                                                <button className="toc-card-subsection w-full text-left" onClick={(e) => { e.stopPropagation(); navigate(`/${currentLang}/thesis#chapter-4`); }}>{t('indice.chapter4.s2')}</button>
+                                                <button className="toc-card-subsection w-full text-left" onClick={(e) => { e.stopPropagation(); navigate(`/${currentLang}/thesis#chapter-4`); }}>{t('indice.chapter4.s3')}</button>
+                                                <button className="toc-card-subsection w-full text-left" onClick={(e) => { e.stopPropagation(); navigate(`/${currentLang}/thesis#chapter-4`); }}>{t('indice.chapter4.s4')}</button>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </Card>
+
+                                {/* 7. Chapter 5 */}
+                                <Card
+                                    className="p-5 hover:shadow-md transition-shadow cursor-pointer bg-white border border-gray-200 rounded-lg"
+                                    onClick={() => navigate(`/${currentLang}/thesis#chapter-5`)}
+                                >
+                                    <div className="flex items-start gap-3">
+                                        <div className="w-8 h-8 rounded-md bg-teal-700 flex items-center justify-center text-white font-bold text-sm shrink-0">
+                                            5
+                                        </div>
+                                        <div className="flex-1">
+                                            <h3 className="text-base font-bold text-gray-900">
+                                                {t('indice.chapter5.title')}
+                                            </h3>
+                                            <ul className="mt-2 space-y-1 pl-0">
+                                                <button className="toc-card-subsection w-full text-left" onClick={(e) => { e.stopPropagation(); navigate(`/${currentLang}/thesis#chapter-5`); }}>{t('indice.chapter5.s1')}</button>
+                                                <button className="toc-card-subsection w-full text-left" onClick={(e) => { e.stopPropagation(); navigate(`/${currentLang}/thesis#chapter-5`); }}>{t('indice.chapter5.s2')}</button>
+                                                <button className="toc-card-subsection w-full text-left" onClick={(e) => { e.stopPropagation(); navigate(`/${currentLang}/thesis#chapter-5`); }}>{t('indice.chapter5.s3')}</button>
+                                                <button className="toc-card-subsection w-full text-left" onClick={(e) => { e.stopPropagation(); navigate(`/${currentLang}/thesis#chapter-5`); }}>{t('indice.chapter5.s4')}</button>
+                                                <button className="toc-card-subsection w-full text-left" onClick={(e) => { e.stopPropagation(); navigate(`/${currentLang}/thesis#chapter-5`); }}>{t('indice.chapter5.s5')}</button>
+                                                <button className="toc-card-subsection w-full text-left" onClick={(e) => { e.stopPropagation(); navigate(`/${currentLang}/thesis#chapter-5`); }}>{t('indice.chapter5.s6')}</button>
+                                                <button className="toc-card-subsection w-full text-left" onClick={(e) => { e.stopPropagation(); navigate(`/${currentLang}/thesis#chapter-5`); }}>{t('indice.chapter5.s7')}</button>
+                                                <button className="toc-card-subsection w-full text-left" onClick={(e) => { e.stopPropagation(); navigate(`/${currentLang}/thesis#chapter-5`); }}>{t('indice.chapter5.s8')}</button>
+                                                <button className="toc-card-subsection w-full text-left" onClick={(e) => { e.stopPropagation(); navigate(`/${currentLang}/thesis#chapter-5`); }}>{t('indice.chapter5.s9')}</button>
+                                                <button className="toc-card-subsection w-full text-left" onClick={(e) => { e.stopPropagation(); navigate(`/${currentLang}/thesis#chapter-5`); }}>{t('indice.chapter5.s10')}</button>
+                                                <button className="toc-card-subsection w-full text-left" onClick={(e) => { e.stopPropagation(); navigate(`/${currentLang}/thesis#chapter-5`); }}>{t('indice.chapter5.s11')}</button>
+                                                <button className="toc-card-subsection w-full text-left" onClick={(e) => { e.stopPropagation(); navigate(`/${currentLang}/thesis#chapter-5`); }}>{t('indice.chapter5.s12')}</button>
+                                                <button className="toc-card-subsection w-full text-left" onClick={(e) => { e.stopPropagation(); navigate(`/${currentLang}/thesis#chapter-5`); }}>{t('indice.chapter5.s13')}</button>
+                                                <button className="toc-card-subsection w-full text-left" onClick={(e) => { e.stopPropagation(); navigate(`/${currentLang}/thesis#chapter-5`); }}>{t('indice.chapter5.s14')}</button>
+                                                <button className="toc-card-subsection w-full text-left" onClick={(e) => { e.stopPropagation(); navigate(`/${currentLang}/thesis#chapter-5`); }}>{t('indice.chapter5.s15')}</button>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </Card>
+
+                                {/* 8. Final Considerations */}
+                                <Card
+                                    className="p-5 hover:shadow-md transition-shadow cursor-pointer bg-white border border-gray-200 rounded-lg"
+                                    onClick={() => navigate(`/${currentLang}/thesis#chapter-6`)}
+                                >
+                                    <div className="flex items-start gap-3">
+                                        <div className="w-8 h-8 rounded-md bg-teal-700 flex items-center justify-center text-white font-bold text-sm shrink-0">
+                                            6
+                                        </div>
+                                        <div className="flex-1">
+                                            <h3 className="text-base font-bold text-gray-900">
+                                                {t('indice.chapter6.title')}
+                                            </h3>
+                                        </div>
+                                    </div>
+                                </Card>
+                            </div>
+                        </div>
+
+                        {/* REFERENCES Section */}
+                        <div>
+                            <div className="flex items-center justify-center gap-4 mb-6">
+                                <div className="flex-1 h-px bg-gray-300"></div>
+                                <span className="text-xs uppercase tracking-widest text-gray-500 font-medium">
+                                    {t('indice.references')}
+                                </span>
+                                <div className="flex-1 h-px bg-gray-300"></div>
+                            </div>
+
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-start">
+                                {/* 9. Bibliography */}
+                                <Card
+                                    className="p-5 hover:shadow-md transition-shadow cursor-pointer bg-white border border-gray-200 rounded-lg"
+                                    onClick={() => navigate(`/${currentLang}/thesis#chapter-7`)}
+                                >
+                                    <div className="flex items-start gap-3">
+                                        <div className="w-8 h-8 rounded-md bg-teal-700 flex items-center justify-center text-white font-bold text-sm shrink-0">
+                                            7
+                                        </div>
+                                        <div className="flex-1">
+                                            <h3 className="text-base font-bold text-gray-900">
+                                                {t('indice.chapter6.s1')}
+                                            </h3>
+                                        </div>
+                                    </div>
+                                </Card>
+
+                                {/* 10. Glossary */}
+                                <Card
+                                    className="p-5 hover:shadow-md transition-shadow cursor-pointer bg-white border border-gray-200 rounded-lg"
+                                    onClick={() => navigate(`/${currentLang}/thesis#chapter-8`)}
+                                >
+                                    <div className="flex items-start gap-3">
+                                        <div className="w-8 h-8 rounded-md bg-teal-700 flex items-center justify-center text-white font-bold text-sm shrink-0">
+                                            8
+                                        </div>
+                                        <div className="flex-1">
+                                            <h3 className="text-base font-bold text-gray-900">
+                                                {t('indice.chapter6.s2')}
+                                            </h3>
+                                        </div>
+                                    </div>
+                                </Card>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Dedicatórias Section */}
-      <section className="py-20 bg-gradient-to-b from-background to-muted/20">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto">
-            <Card className="p-8 md:p-12 shadow-[var(--shadow-card)] animate-fade-in rounded">
-              <h2 className="font-semibold mb-6 text-center">{t('dedicatorias.title')}</h2>
-              <div className="prose-academic">
-                <p>{t('dedicatorias.p1')}</p>
-                <p>{t('dedicatorias.p2')}</p>
-                <p>{t('dedicatorias.p3')}</p>
-                <p>{t('dedicatorias.p4')}</p>
-                <p>{t('dedicatorias.p5')}</p>
-                <p>{t('dedicatorias.p6')}</p>
-              </div>
-            </Card>
-          </div>
-        </div>
-      </section>
+        {/* About the Author Section - Bento Grid */}
+        <AboutAuthor />
 
-      {/* Introduction Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto">
-            <Card className="p-8 md:p-12 shadow-[var(--shadow-card)] animate-fade-in">
-              <h2 className="font-semibold mb-6 text-center">{t('introducao.title')}</h2>
-              <div className="prose-academic">
-                <p>{t('introducao.p1')}</p>
-                <p>{t('introducao.p2')}</p>
-                <p>{t('introducao.p3')}</p>
-                <p>{t('introducao.p4')}</p>
-                <p>{t('introducao.p5')}</p>
-                <p>{t('introducao.p6')}</p>
-                <p>{t('introducao.p7')}</p>
-                <p>{t('introducao.p8')}</p>
-                <p>{t('introducao.p9')}</p>
-                <p>{t('introducao.p10')}</p>
-                <p>{t('introducao.p11')}</p>
-              </div>
-            </Card>
-          </div>
-        </div>
-      </section>
 
-      {/* Chapters Overview - ÍNDICE */}
-      <section id="indice" className="py-20 bg-gradient-to-b from-background to-muted/20">
-        <div className="container mx-auto px-6">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-center mb-12">{t('indice.title')}</h2>
-            
-            <div className="grid md:grid-cols-2 gap-6">
-              {/* Chapter 1 */}
-              <Card className="p-6 hover:shadow-[var(--shadow-card)] transition-all duration-300 animate-fade-in">
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary to-primary/80 flex items-center justify-center text-primary-foreground font-bold text-lg shadow-lg">
-                    1
-                  </div>
-                  <div className="flex-1">
-                    <h3 
-                      className="font-semibold text-lg mb-2 hover:text-primary transition-colors cursor-pointer"
-                      onClick={() => navigate(`/${currentLang}/thesis#chapter-1`)}
-                    >
-                      {t('indice.chapter1.title')}
-                    </h3>
-                    <div className="space-y-0.5">
-                      {chapterSubsections[1]?.map((sub) => (
-                        <button 
-                          key={sub.id}
-                          className="toc-card-subsection w-full text-left"
-                          onClick={(e) => { e.stopPropagation(); navigate(`/${currentLang}/thesis#${sub.id}`); }}
-                        >
-                          {t(sub.labelKey)}
-                        </button>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </Card>
-
-              {/* Chapter 2 */}
-              <Card className="p-6 hover:shadow-[var(--shadow-card)] transition-all duration-300 animate-fade-in" style={{ animationDelay: "0.1s" }}>
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary to-primary/80 flex items-center justify-center text-primary-foreground font-bold text-lg shadow-lg">
-                    2
-                  </div>
-                  <div className="flex-1">
-                    <h3 
-                      className="font-semibold text-lg mb-2 hover:text-primary transition-colors cursor-pointer"
-                      onClick={() => navigate(`/${currentLang}/thesis#chapter-2`)}
-                    >
-                      {t('indice.chapter2.title')}
-                    </h3>
-                    <div className="space-y-0.5">
-                      {chapterSubsections[2]?.map((sub) => (
-                        <button 
-                          key={sub.id}
-                          className="toc-card-subsection w-full text-left"
-                          onClick={(e) => { e.stopPropagation(); navigate(`/${currentLang}/thesis#${sub.id}`); }}
-                        >
-                          {t(sub.labelKey)}
-                        </button>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </Card>
-
-              {/* Chapter 3 */}
-              <Card className="p-6 hover:shadow-[var(--shadow-card)] transition-all duration-300 animate-fade-in" style={{ animationDelay: "0.2s" }}>
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary to-primary/80 flex items-center justify-center text-primary-foreground font-bold text-lg shadow-lg">
-                    3
-                  </div>
-                  <div className="flex-1">
-                    <h3 
-                      className="font-semibold text-lg mb-2 hover:text-primary transition-colors cursor-pointer"
-                      onClick={() => navigate(`/${currentLang}/thesis#chapter-3`)}
-                    >
-                      {t('indice.chapter3.title')}
-                    </h3>
-                    <div className="space-y-0.5">
-                      {chapterSubsections[3]?.map((sub) => (
-                        <button 
-                          key={sub.id}
-                          className="toc-card-subsection w-full text-left"
-                          onClick={(e) => { e.stopPropagation(); navigate(`/${currentLang}/thesis#${sub.id}`); }}
-                        >
-                          {t(sub.labelKey)}
-                        </button>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </Card>
-
-              {/* Chapter 4 */}
-              <Card className="p-6 hover:shadow-[var(--shadow-card)] transition-all duration-300 animate-fade-in" style={{ animationDelay: "0.3s" }}>
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary to-primary/80 flex items-center justify-center text-primary-foreground font-bold text-lg shadow-lg">
-                    4
-                  </div>
-                  <div className="flex-1">
-                    <h3 
-                      className="font-semibold text-lg mb-2 hover:text-primary transition-colors cursor-pointer"
-                      onClick={() => navigate(`/${currentLang}/thesis#chapter-4`)}
-                    >
-                      {t('indice.chapter4.title')}
-                    </h3>
-                    <div className="space-y-0.5">
-                      {chapterSubsections[4]?.map((sub) => (
-                        <button 
-                          key={sub.id}
-                          className="toc-card-subsection w-full text-left"
-                          onClick={(e) => { e.stopPropagation(); navigate(`/${currentLang}/thesis#${sub.id}`); }}
-                        >
-                          {t(sub.labelKey)}
-                        </button>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </Card>
-
-              {/* Chapter 5 */}
-              <Card className="p-6 hover:shadow-[var(--shadow-card)] transition-all duration-300 animate-fade-in" style={{ animationDelay: "0.4s" }}>
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary to-primary/80 flex items-center justify-center text-primary-foreground font-bold text-lg shadow-lg">
-                    5
-                  </div>
-                  <div className="flex-1">
-                    <h3 
-                      className="font-semibold text-lg mb-2 hover:text-primary transition-colors cursor-pointer"
-                      onClick={() => navigate(`/${currentLang}/thesis#chapter-5`)}
-                    >
-                      {t('indice.chapter5.title')}
-                    </h3>
-                    <div className="space-y-0.5">
-                      {chapterSubsections[5]?.map((sub) => (
-                        <button 
-                          key={sub.id}
-                          className="toc-card-subsection w-full text-left"
-                          onClick={(e) => { e.stopPropagation(); navigate(`/${currentLang}/thesis#${sub.id}`); }}
-                        >
-                          {t(sub.labelKey)}
-                        </button>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </Card>
-
-              {/* Chapter 6 - Final Considerations */}
-              <Card className="p-6 hover:shadow-[var(--shadow-card)] transition-all duration-300 animate-fade-in" style={{ animationDelay: "0.5s" }}>
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary to-primary/80 flex items-center justify-center text-primary-foreground font-bold text-lg shadow-lg">
-                    6
-                  </div>
-                  <div className="flex-1">
-                    <h3 
-                      className="font-semibold text-lg mb-2 hover:text-primary transition-colors cursor-pointer"
-                      onClick={() => navigate(`/${currentLang}/thesis#chapter-6`)}
-                    >
-                      {t('indice.chapter6.title')}
-                    </h3>
-                    <div className="space-y-0.5">
-                      <button 
-                        className="toc-card-subsection w-full text-left"
-                        onClick={(e) => { e.stopPropagation(); navigate(`/${currentLang}/thesis#chapter-7`); }}
-                      >
-                        {t('indice.chapter6.s1')}
-                      </button>
-                      <button 
-                        className="toc-card-subsection w-full text-left"
-                        onClick={(e) => { e.stopPropagation(); navigate(`/${currentLang}/thesis#chapter-8`); }}
-                      >
-                        {t('indice.chapter6.s2')}
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </Card>
+        {/* Footer */}
+        <footer className="py-8 border-t border-border/40 bg-card/30 backdrop-blur-sm">
+            <div className="container mx-auto px-6">
+                <p className="text-center text-sm text-muted-foreground">
+                    {t('footer.copyright')}
+                </p>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* About Section */}
-      <section className="py-20 bg-gradient-to-b from-background to-muted/20">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto">
-            <Card className="p-8 md:p-12 shadow-[var(--shadow-card)] animate-fade-in">
-              <div className="text-center mb-8">
-                <div className="w-24 h-24 rounded-full bg-gradient-to-br from-primary to-accent mx-auto mb-6 flex items-center justify-center shadow-xl">
-                  <User className="w-12 h-12 text-primary-foreground" />
-                </div>
-                <h2 className="mb-4">{t('about.title')}</h2>
-              </div>
-              
-              <div className="prose-academic max-w-3xl mx-auto">
-                <div className="mb-8">
-                  <h3 className="mb-4">{t('about.authors')}</h3>
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div>
-                      <p className="font-semibold text-base">{t('about.author1Name')}</p>
-                      <p className="text-muted-foreground text-base">{t('about.author1Role')}</p>
-                      <p className="text-muted-foreground mt-2 text-base">14710 Main St AA202<br />Mill Creek, WA 98012<br />USA</p>
-                      <p className="mt-2 text-base"><a href="mailto:raidhosn1972@gmail.com" className="text-primary hover:underline">raidhosn1972@gmail.com</a></p>
-                    </div>
-                    <div>
-                      <p className="font-semibold text-base">{t('about.author2Name')}</p>
-                      <p className="font-semibold text-base">{t('about.author3Name')}</p>
-                      <p className="text-muted-foreground text-base">{t('about.author2Role')}</p>
-                      <p className="text-muted-foreground mt-2 text-base">Rua Antonio Everdosa 1245<br />CEP: 66080-190<br />Belém-Pará-Brasil</p>
-                      <p className="mt-2 text-base"><a href="mailto:menael@amazon.com.br" className="text-primary hover:underline">menael@amazon.com.br</a></p>
-                    </div>
-                  </div>
-                </div>
-                <div className="bg-muted/30 p-6 rounded-lg">
-                  <h3 className="font-semibold mb-3 text-xl">{t('about.orientation')}</h3>
-                  <p className="text-base"><strong>{t('about.advisor')}</strong> {t('about.advisorName')}</p>
-                  <p className="text-base"><strong>{t('about.coAdvisor')}</strong> {t('about.coAdvisorName')}</p>
-                  <p className="text-base"><strong>{t('about.methodologicalSupervision')}</strong> {t('about.methodologicalSupervisorName')}</p>
-                </div>
-              </div>
-
-              <div className="mt-8 flex flex-wrap justify-center gap-4">
-                <Badge variant="secondary" className="text-sm px-4 py-2">
-                  <GraduationCap className="w-4 h-4 mr-2" />
-                  {t('about.computerScience')}
-                </Badge>
-                <a href="https://www.cesupa.br/" target="_blank" rel="noopener noreferrer" className="inline-block">
-                  <Badge variant="secondary" className="text-sm px-4 py-2 hover:bg-secondary/80 transition-colors cursor-pointer">
-                    <MapPin className="w-4 h-4 mr-2" />
-                    CESUPA
-                  </Badge>
-                </a>
-                <Badge variant="secondary" className="text-sm px-4 py-2">
-                  <Calendar className="w-4 h-4 mr-2" />
-                  1999
-                </Badge>
-              </div>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-6">
-          <div className="max-w-md mx-auto">
-            <Card className="p-8 text-center shadow-[var(--shadow-card)] animate-fade-in">
-              <div className="mb-4 flex justify-center">
-                <img src={emailIcon} alt="Email" width="84" height="51" />
-              </div>
-              <p className="text-lg font-semibold mb-2">{t('contact.email')}</p>
-              <p>
-                <a href="mailto:raidhosn1972@gmail.com" className="text-primary hover:underline">
-                  raidhosn1972@gmail.com
-                </a>
-              </p>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Footer */}
-      <footer className="py-8 border-t border-border/40 bg-card/30 backdrop-blur-sm">
-        <div className="container mx-auto px-6">
-          <p className="text-center text-sm text-muted-foreground">
-            {t('footer.copyright')}
-          </p>
-        </div>
-      </footer>
+        </footer>
     </div>;
 };
 export default Index;

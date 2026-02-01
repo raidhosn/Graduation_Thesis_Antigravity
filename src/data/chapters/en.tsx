@@ -1013,7 +1013,35 @@ export const Chapter8EN = () => (
   </>
 );
 
+// Introduction content component
+export const IntroductionEN = () => (
+  <>
+    <p>The rapid expansion of personal computers, educational programs, applications, electronic data networks, BBSs, more recently the Internet and a hacker subculture, among others, drove research towards the idea of Virtual Reality (VR), which initially had scarce investments. The sophisticated equipment necessary for the full utilization of VR was excessively expensive for the hardware industry standards of the late 1970s.</p>
+    
+    <p>Over the last twenty years, VR has emerged considerably, given the great technological advances, the growth of hardware and software industries, and greater government investment in scientific research, which has enabled the development of cutting-edge technological equipment, allowing research in telepresence systems, the use of computers as a new paradigm of user interface using multi-sensory devices, navigation in three-dimensional spaces, immersion in the application context and real-time interaction, and simultaneously, scientific visualization in distributed environments in this area, to no longer be exclusive to research and/or governmental institutions.</p>
+    
+    <p>Recognizing, therefore, the potential of this VR technology and/or system as a support tool for various areas of knowledge and mainly as an agent of change in the social environment, whether for the present or consequently for future life, this Final Course Project addressed VR, reflecting on the theories, ideas, points of view and definitions that some authors and researchers have disseminated on the subject in question.</p>
+    
+    <p>To this end, in Chapter I, subjects of fundamental importance in directing the study of VR will be proposed, as well as their relationships to it. Therefore, primordial concepts such as the notion of Cyberspace will be examined, which in a few words, corresponds to the mediating space between everything and everyone at a virtual level. Consequently, the notion of Absolute Space will be shown, decomposed into various forms, and lastly, Cybertime, which corresponds to the notions of absolute and digital time.</p>
+    
+    <p>Chapter II seeks to better express and/or satisfactorily define what VR is, including under different interpretations and titles (VR System, VR Technology, Virtual Environment,...). Subsequently, the history of its emergence will be briefly referenced.</p>
+    
+    <p>As for Chapter III, the focus will be on some VR Devices, and mainly on their participation in creating immersive experiences when combined and how they find the sense of presence. Such technologies reside under the following categories: Visual Devices, Tracking Systems, Input Devices, Sound Systems, Haptic Devices, Computing and Graphics Hardware, and Software Tools.</p>
+    
+    <p>The purpose is to show in detail some of these components, describing their main performances regarding immersivity in VR. The handling of this information serves as an introduction and as a guide for people interested in locating a VR installation.</p>
+    
+    <p>Consequently, the different Forms of VR (Hypertext Architecture, Telepresence, Simulation VR, Projection VR, Augmented Reality, Visually Coupled Displays, Desktop VR, and Cyborgs) will be seen in Chapter IV, also observed in light of the degree of user immersion when in a simulated virtual environment.</p>
+    
+    <p>Another important aspect of VR will be seen in Chapter V, which will address its Applications in different branches of science.</p>
+    
+    <p>Finally, the aspects and/or ways in which we will coexist based on technological advances and machinic expressions that express the imaginary and desire will be analyzed, and therefore, how the field of VR will demand attention and will cause mutual cooperation to emerge as a necessity for understanding our activities.</p>
+    
+    <p>This is an exploratory work that seeks a comprehensive synthesis without excessive rigor in its definitions. If it manages in some way to plant seeds of reflection and discussion on interdisciplinary, social, environmental, or philosophical questions, it will have already achieved its objectives.</p>
+  </>
+);
+
 export const chaptersContentEN = {
+  0: IntroductionEN,
   1: Chapter1EN,
   2: Chapter2EN,
   3: Chapter3EN,

@@ -19,14 +19,25 @@
     "readThesisEn": "EN",
     "readThesisPt": "PT"
   },
-  "dedicatorias": {
-    "title": "DEDICATIONS AND ACKNOWLEDGMENTS",
-    "p1": "This work is dedicated to all those who believed in the potential of Virtual Reality as a transformative tool for human-computer interaction.",
-    "p2": "We thank our advisors, Prof. Ms. Marianne Kogut Eliasquevici and Prof. Dr. Gustavo Augusto Lima de Campos, for their dedication, patience and knowledge shared throughout the development of this research.",
-    "p3": "To Prof. Ms. Maria de Fátima Frayha de Souza, for the methodological supervision that was fundamental for the structuring of this work.",
-    "p4": "To our professors at CESUPA, who throughout the course provided us with the knowledge base necessary for carrying out this research.",
-    "p5": "To our family and friends, for their unconditional support and understanding during the moments of absence necessary for the completion of this work.",
-    "p6": "To all who, directly or indirectly, contributed to the realization of this research on Immersive Virtual Reality."
+  "dedications": {
+    "title": "Dedications and Acknowledgments",
+    "dedicationsTitle": "DEDICATIONS",
+    "acknowledgementsTitle": "ACKNOWLEDGMENTS",
+    "claudiaDedication1": "My professional development could not have been achieved without the help of my loving and eternal parents Célio and Cleide Jackson, who, throughout my life, provided me, in addition to extensive affection and love, the knowledge of integrity, perseverance, and always seeking in God the greater strength for my development as a human being. For this reason, I would like to dedicate and acknowledge to you my immense gratitude and everlasting love.",
+    "claudiaDedication2": "To God, I dedicate my greatest thanks, because He has been everything in my life. A special thanks to my dear siblings Cleber, Cleice, and Celice Jackson, who have always remained by my side, in good and bad times; to my dear love Augusto Almeida de Souza, who besides making me happy, helped me throughout my academic life, understanding me and teaching me so that I could achieve my place in the sun; to my wonderful grandmother Lucila Duarte Pereira, who always gave me attention, affection, and precious advice, and to all those who directly or indirectly contributed to this immense happiness I am feeling at this moment.",
+    "claudiaDedication3": "To all of you, my heartfelt thanks.",
+    "claudiaName": "Claudia Pereira Jackson Costa",
+    "raidDedication": "To God, when sometimes feeling discredited and lost in my objectives, ideals, or myself, He allowed me to experience the delight of graduating.\n\nTo my dear father Nadim (Abou Raid) and mother Afaf (Am Raid) Aboul Hosn, who brought me into this world with all love and affection, dedicated themselves, cared for me, and unconditionally gave their blood and sweat in the form of love and work for me, awakening and nurturing in my personality, since childhood, the thirst for knowledge and its importance in my life.\n\nTo my sisters Nadia and Chadia Aboul Hosn, who always raised my self-esteem and especially for believing in and rekindling in me the interest in the old dream of graduating in the field of Computer Science.\n\nTo my late Grandfather Mohamed Amar Aboul Hosn (Sheikh Abou Salman), in whom I mirrored myself in his spirituality, humanism, and wisdom.\n\nTo friends, family, professors, and all those who crossed my path, participating in some way in the construction and realization of this much-desired dream of carrying my graduation diploma (a fundamental ingredient for my happiness).",
+    "raidName": "Raid Nadim Aboul Hosn.",
+    "acknowledgements1": "To Prof. Ms. Arnaldo A. Almeida de Souza Júnior, for the translated texts, guidance, his great willingness to help us, and sincere friendship.",
+    "acknowledgements2": "To Prof. Ms. Marianne Kogut Eliasquevici and Prof. Dr. Gustavo Augusto Lima de Campos, for the guidance of this Final Course Project and sincere friendship.",
+    "acknowledgements3": "To Prof. Ms. Maria de Fátima Frayha de Souza, for the methodological supervision; to Prof. Ms. Leda Mara de Oliveira Monteiro; to Prof. Izidório Cabral; to Dr. Jean Paul Jacob; to Prof. Dr. Claudio Kirner; to Prof. Dr. Marcus Palacius; to Prof. Dr. André Lemos; to Ms. Bianchi Serique Meignins; to the Department of Letters at UFPa., for the guidance and materials provided.",
+    "acknowledgements4": "To friends Walid Aboulhosn and Marcos Paulo de O. Salles Abreu, Uncle Nabih Abou El Hosn for the encouragement and great help with providing materials for the completion of this work. To all of you, our heartfelt thanks.",
+    "acknowledgementsAuthors": "Claudia Pereira Jackson Costa\nRaid Nadim Aboul Hosn"
+  },
+  "abstract": {
+    "title": "ABSTRACT",
+    "content": "Taking into account the development of *Virtual Reality* in recent years, this work presents the main forms of VR, considering their role in the creation of immersive experiences, which is the primary objective of this study. Accordingly, it is necessary to present, among others, the notions of *Cyberspace*, *Cybertime*, *Space*, and *Absolute Time*, which provide a general overview of the field. Subsequently, the various immersive forms of VR are discussed, along with *Telepresence*, *Hypertext*, and *Cyborgs*, proposing them as a new interface paradigm for user interaction. Through examples, existing VR applications are examined across several areas of knowledge. Therefore, the present work draws on extensive bibliographical resources obtained through various research methods (Internet, books, research and development centers, published works, and lectures), which, in a certain way, highlights its importance as a reference source."
   },
   "introducao": {
     "title": "INTRODUCTION",
@@ -44,14 +55,19 @@
   },
   "indice": {
     "title": "TABLE OF CONTENTS",
+    "divider": "CHAPTERS",
+    "preliminary": "PRELIMINARY",
+    "chapters": "CHAPTERS",
+    "references": "REFERENCES",
+    "dedications": "Dedications and Acknowledgments",
     "chapter1": {
-      "title": "Chapter 1 - Fundamental Concepts",
+      "title": "Fundamental Concepts",
       "s1": "1.1 Cyberspace",
       "s2": "1.2 Space",
       "s3": "1.3 Cybertime"
     },
     "chapter2": {
-      "title": "Chapter 2 - What Is Virtual Reality",
+      "title": "What Is Virtual Reality",
       "s1": "2.1 Brief History",
       "s2": "2.2 Definitions",
       "s3": "2.2.1 Immersion",
@@ -59,7 +75,7 @@
       "s5": "2.2.3 Immersion"
     },
     "chapter3": {
-      "title": "Chapter 3 - Forms of Immersive Virtual Reality",
+      "title": "Forms of Immersive Virtual Reality",
       "s1": "3.1 Simulation VR",
       "s2": "3.2 Projection Virtual Reality",
       "s3": "3.3 Augmented Reality (Enhanced Reality)",
@@ -72,14 +88,14 @@
       "s10": "3.9 Cyborg"
     },
     "chapter4": {
-      "title": "Chapter 4 - Virtual Reality Devices",
+      "title": "Virtual Reality Devices",
       "s1": "4.1 Visual Devices",
       "s2": "4.2 Tracking Systems",
       "s3": "4.3 Image Processing",
       "s4": "4.4 Input Devices"
     },
     "chapter5": {
-      "title": "Chapter 5 - Applicability",
+      "title": "Applicability",
       "s1": "5.1 Biopsychosocial Disorders",
       "s2": "5.2 Medicine",
       "s3": "5.3 Architecture and Construction",
@@ -100,6 +116,12 @@
       "title": "Final Considerations",
       "s1": "Bibliography",
       "s2": "Glossary"
+    },
+    "chapter7": {
+      "title": "Bibliography"
+    },
+    "chapter8": {
+      "title": "Glossary"
     }
   },
   "about": {
@@ -117,7 +139,46 @@
     "coAdvisorName": "Prof. Dr. Gustavo Augusto Lima de Campos",
     "methodologicalSupervision": "Methodological Supervision:",
     "methodologicalSupervisorName": "Prof. Ms. Maria de Fátima Frayha de Souza",
-    "computerScience": "Computer Science"
+    "computerScience": "Computer Science",
+    "academicFoundation": "ACADEMIC FOUNDATION",
+    "thesisLabel": "THESIS",
+    "readersLabel": "READERS SINCE 2006",
+    "resumeLabel": "RÉSUMÉ",
+    "download": "Download",
+    "careerJourney": "CAREER JOURNEY",
+    "location": "Mill Creek, WA, USA",
+    "tagline": "25+ years building the future of technology — from **immersive VR research** to enterprise cloud infrastructure. Bridging the gap between theoretical foundations and scalable solutions.",
+    "role": "Computer Scientist",
+    "degree": "B.S. Computer Science",
+    "institution": "CESUPA, Brazil • Class of 2000",
+    "resumeVersion": "v2.4 • Jan 2026",
+    "timeline": {
+      "1999": {
+        "company": "University",
+        "role": "VR Thesis"
+      },
+      "2005": {
+        "company": "IBM",
+        "role": "Engineer"
+      },
+      "2010": {
+        "company": "Dell",
+        "role": "Senior Dev"
+      },
+      "2015": {
+        "company": "Healthcare",
+        "role": "Architect"
+      },
+      "2020": {
+        "company": "Microsoft",
+        "role": "Cloud Lead"
+      },
+      "present": {
+        "year": "Present",
+        "company": "Tech Giant",
+        "role": "Principal"
+      }
+    }
   },
   "contact": {
     "email": "email:"
@@ -128,6 +189,8 @@
   "sidebar": {
     "content": "Content",
     "mainPage": "Main Page",
+    "dedications": "Dedications and Acknowledgments",
+    "introduction": "Introduction",
     "index": "Table of Contents",
     "finalConsiderations": "Final Considerations",
     "bibliography": "Bibliography",

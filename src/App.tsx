@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Index from "./pages/Index";
 import Thesis from "./pages/Thesis";
 import ThesisDemo from "./pages/ThesisDemo";
+import Dedications from "./pages/Dedications";
 import NotFound from "./pages/NotFound";
 import { LanguageRedirect } from "./components/LanguageRedirect";
 import "./i18n";
@@ -17,33 +18,30 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter
-        future={{
-          v7_startTransition: true,
-          v7_relativeSplatPath: true,
-        }}
-      >
+      <BrowserRouter>
         <LanguageRedirect />
         <Routes>
           {/* Root redirects to /en */}
           <Route path="/" element={<Navigate to="/en" replace />} />
-          
+
           {/* English routes */}
           <Route path="/en" element={<Index />} />
+          <Route path="/en/dedications" element={<Dedications />} />
           <Route path="/en/thesis" element={<Thesis />} />
           <Route path="/en/demo" element={<ThesisDemo />} />
-          
+
           {/* Portuguese routes */}
           <Route path="/pt" element={<Index />} />
+          <Route path="/pt/dedications" element={<Dedications />} />
           <Route path="/pt/thesis" element={<Thesis />} />
           <Route path="/pt/demo" element={<ThesisDemo />} />
-          
+
           {/* Legacy routes - redirect to English */}
           <Route path="/thesis" element={<Navigate to="/en/thesis" replace />} />
-          
+
           {/* Demo route for new sidebar */}
           <Route path="/demo" element={<ThesisDemo />} />
-          
+
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

@@ -1,5 +1,9 @@
 {
   "chapters": {
+    "chapter0": {
+      "title": "Introduction",
+      "subtitle": ""
+    },
     "chapter1": {
       "title": "Chapter 1",
       "subtitle": "Fundamental Concepts"
