@@ -14,6 +14,7 @@ import {
 import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
 import { cn } from "@/lib/utils";
 import profilePhoto from "@/assets/profile-photo.jpg";
+import LivingResumeCard from "./LivingResumeCard";
 
 const XIcon = ({ className }: { className?: string }) => (
     <svg
@@ -193,39 +194,12 @@ const AboutAuthor = () => {
                         </span>
                     </div>
 
-                    {/* Tile 5: Resume Download */}
-                    <div className="col-span-6 md:col-span-4 bg-[#4A9B9B] rounded-2xl p-8 text-white flex flex-col transition-all duration-300 hover:bg-[#2D7575] hover:-translate-y-1 hover:shadow-xl">
-                        <div className="flex justify-between items-start mb-auto">
-                            <div>
-                                <span className="text-[10px] uppercase tracking-[2px] font-semibold opacity-80" style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
-                                    Résumé
-                                </span>
-                                <p
-                                    className="text-[1.75rem] font-medium mt-1"
-                                    style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
-                                >
-                                    PDF
-                                </p>
-                            </div>
-                            <FileText className="w-8 h-8 opacity-70" strokeWidth={1.5} />
-                        </div>
-
-                        <p className="text-[0.875rem] opacity-70 mb-6" style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
-                            v2.4 • Jan 2026
-                        </p>
-
-                        <a
-                            href="https://raw.githubusercontent.com/raidhosn/resume/main/Raed-Hosn-Resume.pdf"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label="Download Raed's resume PDF"
-                            className="flex items-center justify-center gap-2 bg-white/15 hover:bg-white/25 text-white py-3.5 px-6 rounded-lg font-medium text-[0.9375rem] transition-all duration-150"
-                            style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}
-                        >
-                            Download
-                            <Download className="w-[18px] h-[18px]" strokeWidth={2} />
-                        </a>
-                    </div>
+                    {/* Tile 5: Resume Download - Living Document Card */}
+                    <LivingResumeCard
+                        resumePdfUrl="https://raw.githubusercontent.com/raidhosn/resume/main/Raed-Hosn-Resume.pdf"
+                        title={t('about.resumeTitle')}
+                        roleContext={t('about.resumeRoleContext')}
+                    />
 
                     {/* Tile 6: Career Journey Timeline */}
                     <div className="col-span-12 bg-white rounded-2xl p-8 md:p-10 shadow-sm border border-[#EDF2F7] mt-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">

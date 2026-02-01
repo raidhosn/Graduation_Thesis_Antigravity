@@ -144,6 +144,8 @@
     "thesisLabel": "THESIS",
     "readersLabel": "READERS SINCE 2006",
     "resumeLabel": "RÉSUMÉ",
+    "resumeTitle": "Professional Resume",
+    "resumeRoleContext": "Cloud & AI Engineering",
     "download": "Download",
     "careerJourney": "CAREER JOURNEY",
     "location": "Mill Creek, WA, USA",
@@ -151,7 +153,6 @@
     "role": "Computer Scientist",
     "degree": "B.S. Computer Science",
     "institution": "CESUPA, Brazil • Class of 2000",
-    "resumeVersion": "v2.4 • Jan 2026",
     "timeline": {
       "1999": {
         "company": "University",
