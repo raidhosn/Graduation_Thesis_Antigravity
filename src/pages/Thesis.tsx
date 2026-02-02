@@ -110,6 +110,14 @@ const Thesis = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-background to-muted/30">
+      {/* Skip to content link for accessibility */}
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-primary focus:text-primary-foreground focus:rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
+      >
+        {currentLang === 'en' ? 'Skip to content' : 'Pular para o conteúdo'}
+      </a>
+
       {/* Header */}
       <header className="border-b border-border/40 bg-background/80 backdrop-blur-sm sticky top-0 z-50">
         <div className="container mx-auto px-6 py-4">
@@ -224,6 +232,7 @@ const Thesis = () => {
 
         {/* Main Content - Scrollable Reading Panel */}
         <main
+          id="main-content"
           ref={readingPanelRef}
           className="flex-1 h-[calc(100vh-73px)] overflow-y-auto scroll-smooth"
         >

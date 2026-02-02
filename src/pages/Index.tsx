@@ -43,6 +43,14 @@ const Index = () => {
         window.scrollTo({ top: 0, behavior: "smooth" });
     };
     return <div className="min-h-screen bg-gradient-to-br from-background via-background to-muted/30">
+        {/* Skip to content link for accessibility */}
+        <a
+            href="#indice"
+            className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-primary focus:text-primary-foreground focus:rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
+        >
+            {currentLang === 'en' ? 'Skip to content' : 'Pular para o conteúdo'}
+        </a>
+
         {/* Language indicator in top right */}
         <div className="fixed top-4 right-4 z-50">
             <LanguageSwitch />
@@ -148,8 +156,11 @@ const Index = () => {
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-start">
                                 {/* 1. Dedications */}
                                 <Card
-                                    className="p-5 hover:shadow-md transition-shadow cursor-pointer bg-white border border-gray-200 rounded-lg"
+                                    className="p-5 hover:shadow-md transition-shadow cursor-pointer bg-white border border-gray-200 rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
                                     onClick={() => navigate(`/${currentLang}/dedications`)}
+                                    tabIndex={0}
+                                    role="button"
+                                    onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); navigate(`/${currentLang}/dedications`); } }}
                                 >
                                     <div className="flex items-start gap-3">
                                         <div className="w-8 h-8 rounded-md bg-teal-700 flex items-center justify-center shrink-0">
@@ -165,8 +176,11 @@ const Index = () => {
 
                                 {/* 2. Introduction */}
                                 <Card
-                                    className="p-5 hover:shadow-md transition-shadow cursor-pointer bg-white border border-gray-200 rounded-lg"
+                                    className="p-5 hover:shadow-md transition-shadow cursor-pointer bg-white border border-gray-200 rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
                                     onClick={() => navigate(`/${currentLang}/thesis#chapter-0`)}
+                                    tabIndex={0}
+                                    role="button"
+                                    onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); navigate(`/${currentLang}/thesis#chapter-0`); } }}
                                 >
                                     <div className="flex items-start gap-3">
                                         <div className="w-8 h-8 rounded-md bg-teal-700 flex items-center justify-center shrink-0">
@@ -195,8 +209,11 @@ const Index = () => {
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-start">
                                 {/* 3. Chapter 1 */}
                                 <Card
-                                    className="p-5 hover:shadow-md transition-shadow cursor-pointer bg-white border border-gray-200 rounded-lg"
+                                    className="p-5 hover:shadow-md transition-shadow cursor-pointer bg-white border border-gray-200 rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
                                     onClick={() => navigate(`/${currentLang}/thesis#chapter-1`)}
+                                    tabIndex={0}
+                                    role="button"
+                                    onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); navigate(`/${currentLang}/thesis#chapter-1`); } }}
                                 >
                                     <div className="flex items-start gap-3">
                                         <div className="w-8 h-8 rounded-md bg-teal-700 flex items-center justify-center text-white font-bold text-sm shrink-0">
@@ -217,8 +234,11 @@ const Index = () => {
 
                                 {/* 4. Chapter 2 */}
                                 <Card
-                                    className="p-5 hover:shadow-md transition-shadow cursor-pointer bg-white border border-gray-200 rounded-lg"
+                                    className="p-5 hover:shadow-md transition-shadow cursor-pointer bg-white border border-gray-200 rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
                                     onClick={() => navigate(`/${currentLang}/thesis#chapter-2`)}
+                                    tabIndex={0}
+                                    role="button"
+                                    onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); navigate(`/${currentLang}/thesis#chapter-2`); } }}
                                 >
                                     <div className="flex items-start gap-3">
                                         <div className="w-8 h-8 rounded-md bg-teal-700 flex items-center justify-center text-white font-bold text-sm shrink-0">
@@ -239,8 +259,11 @@ const Index = () => {
 
                                 {/* 5. Chapter 3 */}
                                 <Card
-                                    className="p-5 hover:shadow-md transition-shadow cursor-pointer bg-white border border-gray-200 rounded-lg"
+                                    className="p-5 hover:shadow-md transition-shadow cursor-pointer bg-white border border-gray-200 rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
                                     onClick={() => navigate(`/${currentLang}/thesis#chapter-3`)}
+                                    tabIndex={0}
+                                    role="button"
+                                    onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); navigate(`/${currentLang}/thesis#chapter-3`); } }}
                                 >
                                     <div className="flex items-start gap-3">
                                         <div className="w-8 h-8 rounded-md bg-teal-700 flex items-center justify-center text-white font-bold text-sm shrink-0">
@@ -265,8 +288,11 @@ const Index = () => {
 
                                 {/* 6. Chapter 4 */}
                                 <Card
-                                    className="p-5 hover:shadow-md transition-shadow cursor-pointer bg-white border border-gray-200 rounded-lg"
+                                    className="p-5 hover:shadow-md transition-shadow cursor-pointer bg-white border border-gray-200 rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
                                     onClick={() => navigate(`/${currentLang}/thesis#chapter-4`)}
+                                    tabIndex={0}
+                                    role="button"
+                                    onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); navigate(`/${currentLang}/thesis#chapter-4`); } }}
                                 >
                                     <div className="flex items-start gap-3">
                                         <div className="w-8 h-8 rounded-md bg-teal-700 flex items-center justify-center text-white font-bold text-sm shrink-0">
@@ -288,8 +314,11 @@ const Index = () => {
 
                                 {/* 7. Chapter 5 */}
                                 <Card
-                                    className="p-5 hover:shadow-md transition-shadow cursor-pointer bg-white border border-gray-200 rounded-lg"
+                                    className="p-5 hover:shadow-md transition-shadow cursor-pointer bg-white border border-gray-200 rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
                                     onClick={() => navigate(`/${currentLang}/thesis#chapter-5`)}
+                                    tabIndex={0}
+                                    role="button"
+                                    onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); navigate(`/${currentLang}/thesis#chapter-5`); } }}
                                 >
                                     <div className="flex items-start gap-3">
                                         <div className="w-8 h-8 rounded-md bg-teal-700 flex items-center justify-center text-white font-bold text-sm shrink-0">
@@ -322,8 +351,11 @@ const Index = () => {
 
                                 {/* 8. Final Considerations */}
                                 <Card
-                                    className="p-5 hover:shadow-md transition-shadow cursor-pointer bg-white border border-gray-200 rounded-lg"
+                                    className="p-5 hover:shadow-md transition-shadow cursor-pointer bg-white border border-gray-200 rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
                                     onClick={() => navigate(`/${currentLang}/thesis#chapter-6`)}
+                                    tabIndex={0}
+                                    role="button"
+                                    onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); navigate(`/${currentLang}/thesis#chapter-6`); } }}
                                 >
                                     <div className="flex items-start gap-3">
                                         <div className="w-8 h-8 rounded-md bg-teal-700 flex items-center justify-center text-white font-bold text-sm shrink-0">
@@ -352,8 +384,11 @@ const Index = () => {
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-start">
                                 {/* 9. Bibliography */}
                                 <Card
-                                    className="p-5 hover:shadow-md transition-shadow cursor-pointer bg-white border border-gray-200 rounded-lg"
+                                    className="p-5 hover:shadow-md transition-shadow cursor-pointer bg-white border border-gray-200 rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
                                     onClick={() => navigate(`/${currentLang}/thesis#chapter-7`)}
+                                    tabIndex={0}
+                                    role="button"
+                                    onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); navigate(`/${currentLang}/thesis#chapter-7`); } }}
                                 >
                                     <div className="flex items-start gap-3">
                                         <div className="w-8 h-8 rounded-md bg-teal-700 flex items-center justify-center text-white font-bold text-sm shrink-0">
@@ -369,8 +404,11 @@ const Index = () => {
 
                                 {/* 10. Glossary */}
                                 <Card
-                                    className="p-5 hover:shadow-md transition-shadow cursor-pointer bg-white border border-gray-200 rounded-lg"
+                                    className="p-5 hover:shadow-md transition-shadow cursor-pointer bg-white border border-gray-200 rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
                                     onClick={() => navigate(`/${currentLang}/thesis#chapter-8`)}
+                                    tabIndex={0}
+                                    role="button"
+                                    onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); navigate(`/${currentLang}/thesis#chapter-8`); } }}
                                 >
                                     <div className="flex items-start gap-3">
                                         <div className="w-8 h-8 rounded-md bg-teal-700 flex items-center justify-center text-white font-bold text-sm shrink-0">

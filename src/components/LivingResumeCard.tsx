@@ -8,6 +8,7 @@ interface LivingResumeCardProps {
     resumeOnlineUrl?: string;
     title?: string;
     roleContext?: string;
+    version?: string;
     downloadFilename?: string;
 }
 
@@ -19,6 +20,7 @@ const LivingResumeCard = ({
     resumeOnlineUrl,
     title = "Professional Resume",
     roleContext = "Cloud & AI Engineering",
+    version = "Latest Version",
     downloadFilename = "Raed-Nadim-Aboul-Hosn-Resume.pdf",
 }: LivingResumeCardProps) => {
     const [downloadState, setDownloadState] = useState<DownloadState>("idle");
@@ -71,8 +73,8 @@ const LivingResumeCard = ({
 
     return (
         <motion.div
-            className="col-span-6 md:col-span-4 bg-white rounded-2xl p-6 shadow-sm border border-[#EDF2F7] flex flex-col min-h-[280px] transition-all duration-200 hover:-translate-y-1 hover:shadow-xl group relative overflow-hidden"
-            whileHover={{ scale: 1.005 }}
+            className="col-span-6 md:col-span-4 bg-white rounded-2xl p-6 shadow-sm border border-[#EDF2F7] flex flex-col min-h-[280px] transition-all duration-200 motion-reduce:transition-none hover:-translate-y-1 hover:shadow-xl motion-reduce:hover:translate-y-0 group relative overflow-hidden"
+            whileHover={typeof window !== 'undefined' && !window.matchMedia('(prefers-reduced-motion: reduce)').matches ? { scale: 1.005 } : {}}
         >
             {/* Teal gradient overlay on hover */}
             <div className="absolute inset-0 bg-gradient-to-br from-[#2a7a85]/[0.03] to-[#2a7a85]/[0.08] opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none rounded-2xl" />
@@ -80,7 +82,7 @@ const LivingResumeCard = ({
             {/* Content wrapper */}
             <div className="relative z-10 flex flex-col h-full">
                 {/* Non-Interactive Thumbnail Preview */}
-                <div className="mb-4 flex justify-center pointer-events-none user-select-none" aria-hidden="true">
+                <div className="mb-4 flex justify-center pointer-events-none select-none" aria-hidden="true">
                     {thumbnailSrc ? (
                         <div className="relative w-[160px] h-[100px] rounded-lg overflow-hidden border border-black/8 shadow-[0_2px_8px_rgba(0,0,0,0.06)] group-hover:shadow-[0_6px_16px_-4px_rgba(0,0,0,0.1)] transition-all duration-200">
                             <motion.img
@@ -130,7 +132,7 @@ const LivingResumeCard = ({
                 {/* Latest Version Indicator */}
                 <div className="flex items-center justify-center gap-1.5 mb-6">
                     <div
-                        className="w-2 h-2 rounded-full bg-[#14b8a6]"
+                        className="w-2 h-2 rounded-full bg-[#14b8a6] motion-reduce:animate-none"
                         style={{
                             animation: 'resumePulse 2.5s ease-in-out infinite',
                         }}
@@ -140,7 +142,7 @@ const LivingResumeCard = ({
                         className="text-[13px] font-medium text-[#6b7280]"
                         style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}
                     >
-                        Latest Version
+                        {version}
                     </span>
                 </div>
 

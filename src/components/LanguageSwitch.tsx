@@ -41,7 +41,7 @@ export const LanguageSwitch = () => {
       variant="outline"
       size="sm"
       onClick={switchLanguage}
-      className="gap-2 transition-all duration-150 bg-white text-teal-600 border-teal-600 hover:bg-teal-50 hover:text-teal-700 hover:border-teal-700"
+      className="gap-2 transition-all duration-150 motion-reduce:transition-none bg-white text-teal-600 border-teal-600 hover:bg-teal-50 hover:text-teal-700 hover:border-teal-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-600 focus-visible:ring-offset-2"
       aria-label={ariaLabel}
     >
       <Globe className="w-4 h-4" />
